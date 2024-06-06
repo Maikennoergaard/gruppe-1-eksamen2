@@ -1,0 +1,2366 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Titillium Web", sans-serif;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+}
+/*Farve definationer*/
+:root { 
+    --red: #c7352a;
+    --gul: rgba(243, 236, 134, 0.847);
+    /* --gul: #f3ec86; */
+    --lilla: #ded7ff;
+    --background: #f3f5dd;
+    --contrastbackground:#DDDFC7;
+    --dark: #3d0200;
+}
+
+/*Body styling*/
+body{
+  background-color: var(--background);
+}
+
+
+/*Font styling*/
+h3{
+  display: flex;
+  color: var(--dark);
+  font-family: "Alef", sans-serif;
+}
+
+h4{
+  display: flex;
+  color: var(--dark);
+  font-family: "Alef", sans-serif;
+  margin-bottom: 2%;
+}
+
+p{
+  color: var(--dark);
+  font-family: "Alef", sans-serif;
+  font-size: 0.8em;
+}
+
+/*Rød stor font - bliver brugt x4*/
+.alefred{
+  color: var(--red);
+  font-size: 2.5em;
+  font-family: "Alef", sans-serif;
+}
+
+/*Almindelig font mørk*/
+.alefdark{
+color: var(--dark);
+font-family: "Alef", sans-serif;
+}
+
+/*gennemgående knapper*/
+.alefdarkknap{
+  color: var(--dark);
+  font-family: "Alef", sans-serif;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border: 2px solid var(--red);
+  margin-top: 7%;
+  margin-bottom: 7%;
+}
+
+/*Håndskrevet font - citater*/
+.annielille{
+color: var(--dark);
+font-size: 1.5em;
+font-family: "Annie Use Your Telescope", cursive;
+}
+
+/*Håndskrevet font - overskrifter*/
+.anniestor{
+color: var(--dark);
+font-size: 2em;
+font-family: "Annie Use Your Telescope", cursive;
+}
+
+/* Navbar */
+.logo img {
+  width: 100px;
+  height: auto;
+}
+
+nav {
+  background-color: var(--contrastbackground);
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  overflow-x: auto;
+}
+
+nav ul {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 5px 10px;
+}
+
+nav li {
+  height: 50px;
+}
+
+nav a {
+  height: 100%;
+  padding: 0 20px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--dark);
+  font-family: "Alef", sans-serif;
+  font-size: 1.1rem;
+}
+
+.hideOnMobile nav a {
+  color: var(--red);
+}
+
+nav a:hover {
+  border-radius: 10px;
+}
+
+nav li:first-child {
+  margin-right: auto;
+}
+
+/*burgermenu indhold*/
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  background-color: var(--gul);
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 170px;
+  gap: 20px;
+  z-index: 200;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.sidebar li {
+  width: 100%;
+}
+
+.sidebar a {
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  text-decoration: none;
+  color: var(--dark);
+}
+
+.menu-button {
+  display: none;
+}
+
+.krys {
+  position: absolute;
+  left: 140px;
+  top: 40px;
+}
+
+.kigop {
+  position: absolute;
+  bottom: 0;
+  width: 250px;
+  right: 10px;
+}
+
+.bue1{
+  position: absolute;
+  top: 135px;
+
+}
+
+.bue2{
+  position: absolute;
+  top: 270px;
+}
+
+
+
+/*Menukort - slide out*/
+  /* Menukort */
+  #menucard {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  #morewordsmenu {
+    margin-block-start: 0;
+    margin-block-end: 1em;
+    margin-top: 170%;
+  }
+
+  #tekstmenu {
+    line-height: 110%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+    font-size: 1.7em;
+  }
+
+  #menusandwich {
+    display: grid;
+    grid-template-columns: 10% 1% 65% 20%;
+    grid-row-gap: 50px;
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+
+  #menusandwich li {
+    gap: 50px;
+  }
+
+  #prismenu {
+    font-size: 2em;
+    margin-bottom: 5%;
+    font-weight: 600;
+    font-family: "Annie Use Your Telescope", cursive;
+  }
+
+  .bladicon{
+    max-width: 100%;
+    height:40px;
+    padding: 5px;
+    margin-left: 5px;
+  }
+
+  .bladiconrow{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  #menukortsandwichimg, #menukortkaffeimg {
+    width: 70%;
+    grid-column-start: 1;
+    grid-column-end: 7;
+    justify-self: center;
+  }
+
+
+  #bestilknapmenu{
+    width: 40%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-bottom: 10%;
+    margin-top: 10%;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  } 
+
+  #bestilknapmenu:hover {
+    background-color: var(--contrastbackground); /* Change background color on hover */
+    box-shadow: 0 4px 15px #c7352a(0, 0, 0, 0.2); /* Add box shadow on hover */
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+    border-color: var(--red);
+  }
+
+  #andimg {
+    position: relative;
+    margin-top: 600px;
+  }
+
+  #andimg h3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    font-size: 3.7em;
+    z-index: 0;
+  }
+
+  #andimg img {
+    position: absolute;
+    width: 200px;
+    z-index: 1;
+    top: 65%;
+    left: 60%;
+    transform: translateX(-50%);
+  }
+
+  /*Styling af tekst lodret tekst*/
+  aside{
+    grid-column: 1;
+  }
+
+  #lodretskrift, #lodretskrift2, #lodretskrift3{
+    transform: rotate(90deg);
+    font-size: 2em;
+    font-weight: 100;
+    margin-top: 20%;
+  }
+  
+  /*lodret linje*/
+  hr{
+    grid-column: 2;
+    background-color: var(--red);
+    width: 60%;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    border-width: 0;
+  }
+
+  /*Menu elementer styling*/
+  #sandwichul, #sodtul, #drikkeul{
+    grid-column-start: 3;
+    grid-column-end: 5; 
+    margin-left: 5%;
+  }
+
+  #sandwichul li, #sodtul li, #drikkeul li{
+    margin-block-end: 1.5em;
+    margin-block-start: 0em;
+  }
+
+  .menuitemname{
+    font-weight: 400;
+  }
+
+  /*Styler sandwich ord med vegetar icon*/
+  #provencal{
+    margin-bottom: 0;
+  }
+
+  /*Styling af menukort animation*/
+  .hidden{
+    opacity: 0;
+    transform: translateX(+100%);
+    transition: all 1.5s;
+  }
+
+  .hidden2{
+    opacity: 0;
+    transform: translateX(+100%);
+    transition: all 1.5s;
+  }
+
+  .show{
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+/* popud menu */
+.menu-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 20000;
+  }
+  
+  .btn {
+    display: inline-block;
+    margin: 10px;
+    color: var(--gul);
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transform: rotate(-90deg);
+    position: fixed;
+    top: 200px;
+    right: -80px;
+    z-index: 9;
+  }
+
+  .sticky {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+  }
+  
+  .open-btn {
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 1rem 1.8rem;
+    cursor: pointer;
+  }
+  
+  .popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--background); /* Semi-transparent overlay */
+    z-index: 999;
+    overflow-y: auto; /* Enable vertical scrolling */
+  }
+  
+  .main-popup {
+    position: absolute;
+    height: 100vh; /* Juster højden efter behov */
+    width: 100%; /* Juster bredden efter behov */
+    z-index: 999; /* Juster z-indekset efter behov */
+    padding-top: 300pc;
+    background: var(--background);
+    padding: 30px 20px;
+    line-height: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: none; /* Fjerner fast maksimal bredde */
+    overflow-x: hidden; /* Forhindrer vandret rulning */
+    transform: translateX(100%);
+}
+
+  
+  .popup-overlay {
+    background-color: var(--gul);
+    height: 100vh;
+    width: 100%;
+    right: 0;
+    position: relative; /* Ændrer position til relativ */
+    overflow-x: hidden; /* Forhindrer vandret rulning på overlay */
+    max-width: 100%;
+  }
+  
+
+  .main-popup.slide-in {
+    animation: slide-in 0.5s ease forwards;
+  }
+  
+  .main-popup.slide-out {
+    animation: slide-out 0.5s ease forwards;
+  }
+  
+  .close-btn {
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+    position: sticky;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: .5s ease all;
+    z-index: 100;
+  }
+  
+  .popup-content p {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+  
+  @keyframes slide-in {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slide-out {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+  
+  
+/**************************************************/
+/********************* Forside ********************/
+  /* video forside */
+    .forside1 {
+      height: 93vh;
+      position: relative; /* Tilføjer position: relative; til forældreelementet */
+    }
+
+    .forside-video {
+      width: 100%;
+      height: 100%; /* Sætter videoens højde til 100% af forældreelementets højde */
+      position: absolute;
+      top: 0;
+      left: 0;
+      object-fit: cover; /* Sikrer, at videoen fylder hele forældreelementet uden at miste proportioner */
+    }
+
+  /* scrool pil */
+    .pil{
+      position: absolute;
+      top: 85%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .pil div{
+      display: block;
+      width: 25px;
+      height: 25px;
+      border-bottom: 5px solid var(--gul);
+      border-right: 5px solid var(--gul);
+      transform: rotate(45deg);
+      margin: -5px;
+      animation: animate 2s infinite;
+    }
+
+    .pil div:nth-child(2){
+      animation-delay: -0.2s;
+    }
+
+    .pil div:nth-child(3){
+      animation-delay: -0.4s;
+    }
+
+    @keyframes animate{
+      0% {
+        opacity: 0;
+        transform: rotate(45deg) translate(-20px, -20px);
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+        transform: rotate(45deg) translate(20px, 20px);
+      }
+    }
+
+  /* multiwords(dingse)*/
+    .firexdingse {
+      margin-top: -10%;
+      margin-left: 30%;
+      font-size: 2rem;
+    }
+
+    .firexdingse h3 {
+      opacity: 0;
+      transform: translateY(20px); /* Startposition under deres endelige destination */
+      transition: opacity 0.2s ease-out, transform 0.2s ease-out;
+    }
+
+    .firexdingse h3.visible {
+      opacity: 1;
+      transform: translateY(0); /* Endelig position */
+    }
+
+  /*bestilknap forside*/
+    .bestilknapforside2{
+      width: 40%;
+      padding-top: 1%;
+      padding-bottom: 1%;
+      font-weight: 500;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+      margin-bottom: 10%;
+      margin-top: 2%;
+      cursor: pointer;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    }
+
+    .bestilknapforside2:hover {
+      background-color: var(--contrastbackground); /* Change background color on hover */
+      box-shadow: 0 4px 15px #c7352a(0, 0, 0, 0.2); /* Add box shadow on hover */
+      transform: scale(1.05); /* Slightly enlarge the button on hover */
+      border-color: var(--red);
+    }
+
+  /* dingsedame */
+    .dingseukop {
+      width: 60%;
+      margin-top: 10%;
+    }
+
+  /* midtersection */
+  .midtersection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    margin: 8% 10%;
+    text-align: center;
+    margin-top: 8%;
+  }
+
+  /* Fjerner noget af teksten fra mobil version */
+    .responsivetekst {
+      display: none;
+    }
+
+    #responsivetekst {
+      display: none;
+    }
+    
+    #responsivetekst1 {
+      display: flex;
+      justify-content: center;
+      font-weight: 200;
+    }
+
+    #responsivetekst2 {
+      display: flex;
+      justify-content: center;
+      font-weight: 200;
+    }
+    
+  /* tekst til midtersection */
+    .knap {
+      border: 2px solid #c7352a; 
+      margin-left: 20px;
+      margin-right: 20px;
+      padding-bottom: 2px; 
+    }
+
+    #kursivtekst {
+      margin-top: 5%;
+      margin-left: 5%;
+      margin-right: 5%;
+      text-align: center;
+      font-weight: 200;
+    }
+
+  /* billeder på midtersection */
+    .udefraillustration {
+      width: 80%;
+      height: 80%;
+      margin-top: 5%;
+      margin-bottom: 5%;
+    }
+
+    .broedforside{
+      width: 100%;
+      height: 100%;
+      margin-top: 0;
+      object-fit: cover;
+    }
+
+  /* instagram sektion */
+
+    .instagram {
+      margin-top: 20%;
+    }
+
+    .foelgtekst {
+      text-align: center;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      margin-top: 10%;
+    }
+
+    .midtersection h2 {
+    padding: 2%;
+    }
+
+    .foelgbilleder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    height: 60%;
+    flex-direction: column;
+    margin-top: 8%;
+    }
+
+    .billedeserie1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    }
+
+    .foelgknap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+    .desktopbilleder {
+      display: none;
+    }
+
+    .desktopbilleder img {
+      display: none;}
+
+
+/**************************************************/
+/******************* Kontakt os *******************/ 
+
+
+  /* Styling af font med ID for at størrelserne passer */
+
+  #openhours{
+    font-size: 2em;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+  }
+
+  #vibor, #adressekontakt{
+    font-size: 2em;
+  }
+
+  /* Styling af tekst + padding */
+
+  .kontakt-main {
+    display: flex;
+    flex-direction: column;
+    gap: 2%;
+    text-align: center;
+  }
+
+  /* Styling af billeder på kontakt siden */
+
+  .coverbillede {
+    height: 40vh;
+    position: relative;
+  }
+
+  .coverkontakt {
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    left: 0;
+  }
+
+  .kort-kontakt {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Tilføjet padding for at give luft mellem teksten på siden. Tilføjet i % for at være responsiv */
+  .kontakt-sektion {
+    padding: 5%;
+  }
+
+  .adresse-kontakt {
+    padding: 5%;
+    text-align: center;
+  }
+
+  .telefon-nummer-kontakt {
+    padding: 5%;
+  }
+  .telefon-nummer-kontakt h2 {
+    margin-bottom: 3%;
+  }
+
+  /* Styling af ring tekst + dingsedame med telefon. Da dette er en lidt anden styling end en colum bruges inline grid */
+    .ringx4container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding: 5%;
+      margin: auto;
+      box-sizing: border-box;
+      width: fit-content;
+    }
+
+    .ringx4 {
+      text-align: center;
+      padding: 5%;
+      background-color: var(--background);
+    }
+
+    .ringx4 h3 {
+      opacity: 0;
+      transform: translateY(20px); /* Startposition under deres endelige destination */
+      transition: opacity 0.2s ease-out, transform 0.2s ease-out;
+    }
+
+    .ringx4 h3.visible {
+      opacity: 1;
+      transform: translateY(0); /* Endelig position */
+    }
+
+    .dingsetelefon {
+      width: auto;
+      height: 35vh;
+    }
+
+    .foelgknap1 {
+      margin: 5% 5%;
+      }
+
+/**************************************************/
+/***************** Menukort i html ****************/
+
+  .menukort_main{
+    display: flex;
+    min-height: 100vh;
+  }
+
+  #menucard2 {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  #morewordsmenu2 {
+    margin-block-start: 0;
+    margin-block-end: 1em;
+  }
+
+  #andimg2 {
+    position: relative;
+    margin-top: 50px;
+  }
+
+  #andimg2 h3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 3.7em;
+    z-index: 0;
+  }
+
+  #andimg2 img {
+    position: absolute;
+    width: 250px;
+    z-index: 1;
+    top: 10%;
+    left: 60%;
+    transform: translateX(-50%);
+  }
+
+  #tekstmenu2 {
+    line-height: 110%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 1.7em;
+  }
+
+  .krysmenuhtml{
+    position: absolute;
+    right: 20px;
+    margin-top: 10px;
+  }
+ 
+/************************************************* */
+/************ Bag om Dingse ************/
+
+  /* Styling af første del af bagom */
+    .bagom1{
+      display: grid;
+    }
+
+    .bagom1 h1 {
+      text-align: center;
+      padding: 5%; 
+    }
+
+    .bagom1 p {
+      padding: 5%;
+      text-align: justify;
+    }
+
+  /* Styler så billedet er 100% på telefon */
+    .bagom1 img{
+      width: 100%;
+    }
+
+    .read-more img{
+      width: 100%;
+    }
+
+  /* Styler søren og olivia teksten til mobil */
+    .bagom-ordx4 {
+      padding: 5% 3%;
+      margin-left: 20px;
+    }
+
+    .bagom-ordx4 h3 {
+      opacity: 0;
+      transform: translateY(20px); /* Startposition under deres endelige destination */
+      animation: pop 0.2s forwards;
+    }
+
+    .bagom-ordx4 h3:nth-child(1) {
+      animation-delay: 0s;
+    }
+
+    .bagom-ordx4 h3:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+
+    .bagom-ordx4 h3:nth-child(3) {
+      animation-delay: 0.4s;
+    }
+
+    .bagom-ordx4 h3:nth-child(4) {
+      animation-delay: 0.6s;
+    }
+
+    @keyframes pop {
+      to {
+          opacity: 1;
+          transform: translateY(0); /* Endelig position */
+      }
+    }
+
+  /* tekst til bagom */
+    .tekst_container_bagom {
+      margin-top: 10%;
+    }
+
+    .broedtekst {
+      display: flex;
+      justify-content: center;
+      text-align: justify;
+      align-items: center;
+      margin-left: 10%;
+      margin-right: 10%;
+      margin-bottom: 1%;
+      line-height: 2rem;
+    }
+
+    #mere {
+      margin-left: 10%;
+    }
+
+    .bagom-ordx4 {
+      padding: 5% 3%;
+      margin-left: 20px;
+    }
+
+
+  /* Bag om undersider */
+
+  /* om søren og olivia */
+    #tekst_container_bagom {
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Center items horizontally */
+    }
+
+    .skjult {
+      display: none;
+    }
+
+    #laesMereKnap, #lukKnap {
+      border: 2px solid #c7352a; 
+      padding-bottom: 2px;
+      display: flex;
+      justify-content: center;
+      margin: 0 40% 70px 40%;
+    }
+
+    #lukKnap {
+      display: none;  /* Initially hide the "Luk" button */
+    }
+
+  /* Mere om */
+    .read-more {
+      margin: 60px 0;
+    }
+
+    .faqer {
+      margin-bottom: 15%;
+      margin-left: 10%;
+      margin-right: 10%;
+    }
+
+    .read-more-content {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+
+    .text {
+      background-color: var(--background);
+      width: 50%;
+      color: #FFFFFF;
+      padding: 20px;
+      box-sizing: border-box;
+      line-height: 2rem;
+    }
+
+    .mobil_broed {
+      display: none;
+    }
+
+    .img {
+      background-color: var(--background);
+      width: 50%;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+  /*læs mere knap bag om*/
+    .fold_reply {
+      display: flex;
+      cursor: pointer; 
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      margin-left: -84%;
+      margin-top: -10%;
+    }
+
+    .in{
+      margin-left: 0;
+    }
+
+
+    .fold_btn {
+      padding: 5px 10px;
+      margin: 10px 0;
+      background-color: var(--contrastbackground);
+      color: var(--dark);
+      font-family: "Alef", sans-serif;
+      text-align: center;
+      cursor: pointer;
+      width: 8em;
+    }
+
+    .fold_btn1 {
+      padding: 5px 10px;
+      margin: 10px 0;
+      background-color: var(--contrastbackground);
+      color: var(--dark);
+      font-family: "Alef", sans-serif;
+      text-align: center;
+      cursor: pointer;
+      width: 8em;
+      margin-left: 92% ;
+      margin-left: 90% ;}
+
+    .fold_in_btn {
+      display: block;
+      width: 25px;
+      height: 25px;
+      border-bottom: 5px solid var(--red);
+      border-right: 5px solid var(--red);
+      transform: rotate(225deg);
+      margin-top: 220px;
+      margin-left: 0;
+      animation: hop 1s ease-in-out infinite;
+    }
+
+    @keyframes hop {
+      0% { transform: translateY(0) rotate(225deg); }
+      50% { transform: translateY(-10px) rotate(225deg); }
+      100% { transform: translateY(0) rotate(225deg); }
+    }
+
+
+
+    .reply {
+      display: none; /* Hide the reply content initially */
+      background-color: var(--contrastbackground);
+      margin-bottom: 7%;
+      padding: 11% 0 3% 0;
+    }
+
+  /* Styling af fold ud siderne */
+    .content {
+      display: none;
+      overflow: hidden;
+    }
+
+  /* Styler alle p i "content" fold ud sektionerne */
+
+  /* surdej foldud side */
+    /* tekst til foldud surdej */
+
+      #h1_foldud {
+        font-weight: 100;
+        margin-bottom: 2%;
+      }
+
+      #h2_foldud {
+      font-weight: 100;
+      margin-bottom: -7%;
+      }
+
+      #h3_foldud {
+      font-size: 3rem;
+      color: #c7352a;
+      margin-left: 22%;
+      margin-bottom: 1%;
+      }
+
+      #h3_foldud_siden {
+        font-size: 3rem;
+        color: #c7352a;
+        margin-left: 58%;
+        margin-top: -5%;
+        }
+
+      #p_foldud {
+        margin-right: 30%;
+        margin-bottom: 5%;
+      }
+
+      .p_foldud_info {
+        margin-left: 25%;
+        margin-right: 55%;
+        margin-top: 2%;
+      }
+
+      .p_foldud_info_side {
+      margin-left: 60%;
+      margin-right: 20%;
+      }
+
+      .tekst_foldud_bagom {
+        margin-top: 5%;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-bottom: 10%;
+      }
+
+    /* billeder foldud bagom surdej */
+      .surdej5 {
+        object-fit: cover;
+        height: 50vh;
+        width: 35vh;
+        margin-top: -180px;
+      }
+
+      #fermentering_af_surdej {
+      width: 20%;
+      margin-left: 25%;
+      margin-top: -2%;
+      }
+
+      #straek_og_fold_surdej {
+      width: 20%;
+      margin-left: 60%;
+      margin-top: -5;
+      }
+
+      #bages_ved_hoej_varme {
+      width: 20%;
+      margin-left: 25%;
+      margin-top: -2%;
+      }
+
+      #laesmere_hover:hover {
+        background-color: var(--gul); /* Change background color on hover */
+        box-shadow: 0 4px 15px #c7352a(0, 0, 0, 0.2); /* Add box shadow on hover */
+        transform: scale(1.05); /* Slightly enlarge the button on hover */
+      }
+
+  /* dingsevand foldud side */
+
+    /* tekst til folud dingsevand */
+
+      .dingsedrik_titel {
+        margin-top: -8%;
+        margin-left: 10%;
+      }
+
+      #h2_hjemmelavet {
+        font-weight: 100;
+      }
+
+      .p_foldud_dingsevand {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-left: 20.5%;
+        margin-right: 20.5%;
+        margin-top: 5%;
+      }
+
+      #h3_foldud_dingsevand {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-left: 20.5%;
+        margin-right: 20.5%;
+        margin-top: 5%;
+      }
+
+
+    /* billeder foldud dingsevand */
+      #dingsevand_figur {
+        width: 40%;
+        margin-left: 50%;
+        margin-top: -7%;
+        margin-bottom: 5%;
+      }
+
+      .dingsevand-fotocontainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px; 
+      }
+
+      .dingsevand-fotocontainer img {
+        object-fit: cover;
+        width: 50vh;
+        height: 50vh;
+      }
+
+
+      .dingsevand_illustration {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #dingsevand_illustration {
+        width: 30%;
+        height: auto;
+        margin-top: 3%;
+      }
+
+    /* smagsvarianter */
+      .smagsvarianter {
+        display: flex;
+        justify-content: center; 
+        align-items: center;     
+        gap: 40px;  
+        margin-top: 5%; 
+        margin-bottom: 3%;            
+      }
+
+      .smagsvarianter > div {
+        text-align: center;      
+      }
+
+      .smagsvarianter img {
+        width: 120px;            
+        height: auto;
+      }
+
+  /* råvarer foldud side */
+    /* tekst i folud råvare */
+      #h2_foldud_raevare {
+        font-weight: 100;
+        margin-top: -7%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-left: 17%;
+        margin-right: 17%;
+        margin-bottom: 5%;
+      }
+
+      .p_foldud_raevare_mobil {
+        display: none;
+      }
+
+      .p_foldud_raevare {
+        margin-top: 5%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: justify;
+        margin-left: 20%;
+        margin-right: 20%;
+      }
+
+      .p_foldud_raevare_desk {
+        margin-top: 5%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: justify;
+        margin-left: 20%;
+        margin-right: 20%;
+      }
+
+    /* billeder/video i foldud råvare */
+      .bagom-raevare {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+      }
+      .raevare-video {
+        width: 60%;
+      }
+
+      .platte_container {
+        display: flex;
+        justify-content: center; 
+        align-items: center;  
+        margin-top: 5%;
+        margin-bottom: 5%;
+      }
+
+      .platte {
+        width: 80%;             
+        max-width: 600px;       
+        height: auto;            
+      }
+
+    /* olivien oliecontainer */
+      .oliven_container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10%;
+        margin-top: 10%;
+        margin-bottom: 10%;
+      }
+
+      .olivenolie_og_smoer {
+        max-width: 300px;
+      }
+
+
+
+  /* Gallery section styling */
+    .galleri {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      padding: 2em 1em;
+      margin-bottom: 5%;
+      margin-top: -5%;
+      margin-left: 7%;
+      margin-right: 7%;
+    }
+
+    #galleri_tekst {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #galleri_tekst1 {
+      margin-bottom: 3%;
+    }
+
+    .insta-container {
+      display: flex;
+      justify-content: center;
+      text-align: justify;
+      flex-direction: column;
+      margin-top: 3%;
+      margin-left: 6%;
+      margin-right: 20%;
+    }
+
+
+    /* Image container styling */
+    .foto-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1em; 
+      justify-content: center;
+    }
+
+    /* Mobile image styling */
+    .fotomobil {
+      width: 100%;
+      height: auto;
+    }
+
+    .fotodesktop {
+      width: 80%;
+      height: auto;
+    }
+
+    /* Hide desktop image by default */
+    .fotodesktop {
+      display: none;
+    }
+
+/************************************************* */
+/************ Footer ************/
+footer {
+  background-color: #DDDFC7; 
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.8rem;
+  color: #3d0200;
+  width: 100%;
+  box-sizing: border-box;
+  bottom: 0;
+  left: 0;
+}
+
+.info-container1,
+.info-container2 {
+  list-style-type: none;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.besøg {
+  margin-bottom: 5%;
+}
+
+.icon {
+  width: 3rem;
+  margin-top: 7%;
+  margin-bottom: 7%;
+  margin-left: 1rem; 
+  margin-right: 1rem; 
+} 
+/* ************************************************ */
+
+/*Media Querey Computer*/
+
+
+  /* Vi har stylet alt vores CSS mobile first og tilføjet media querys til desktop efter */
+
+  /* STYLING AF FONT TIL COMPUTER */
+
+  @media (min-width: 700px) {
+      /*Font styling*/
+      h3{
+        display: flex;
+        color: var(--dark);
+        font-family: "Alef", sans-serif;
+      }
+
+      h4{
+        display: flex;
+        color: var(--dark);
+        font-family: "Alef", sans-serif;
+      }
+
+      p{
+        color: var(--dark);
+        font-family: "Alef", sans-serif;
+        font-size: 1.2em;
+      }
+
+      /*Rød stor font - bliver brugt x4*/
+      .alefred{
+        color: var(--red);
+        font-family: "Alef", sans-serif;
+      }
+
+      .anniestor {
+        color: var(--dark);
+        font-size: 2.3em;
+        font-family: "Annie Use Your Telescope", cursive;
+      }
+    }
+
+  /* Menukort */
+  @media (min-width: 400px) {
+    
+    /*Sektion med billed og 4x sandwich på menukort*/
+    #andimg{
+      margin-top: 230%;
+    }
+
+  }
+
+  @media (min-width: 525px) {
+    /* Styling af menukort*/
+    /* Sektion med ord og billede*/
+    #morewordsmenu{
+      margin-top: 190%;
+      font-size: 130%;
+    }
+
+    /* Øverste dingsedame på menukortet*/
+    #andimg img{
+      width: 270px;
+      top: 70%;
+    }
+
+    /* Sandwich, sødt og drikkevare listerne på menukort*/
+    #sandwichul, #sodtul, #drikkeul{
+      font-size: 150%;
+      line-height: 130%;
+    }
+
+    /*De lodrette skrifter i asiden på menukort*/
+    #lodretskrift, #lodretskrift2, #lodretskrift3{
+      font-size: 300%;
+    }
+  }
+
+  @media (min-width: 700px) {
+
+    #andimg img{
+      top: 65%;
+      width: 300px;
+    }
+
+    #andimg h3 {
+      margin-top: 40%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-block-start: 1em;
+      margin-block-end: 1em;
+    }
+
+    #morewordsmenu{
+      margin-top: 130%;
+      font-size: 150%;
+    }
+
+    #lodretskrift, #lodretskrift2, #lodretskrift3{
+      margin-top: 36%;
+    }
+
+    #tekstmenu {
+      font-size: 2em;
+    }
+
+    #tekstmenu2 {
+      font-size: 2em;
+    }
+
+    .menuitemname{
+      font-size: 1em;
+    }
+
+    .menuitemtxt{
+      font-size: 0.8em;
+      text-align: left;
+    }
+
+    #bestilknapmenu{
+      font-size: 1.2em;
+    }
+
+    #bestilknapforside{
+      font-size: 1.2em;
+    }
+
+  h3{
+      display: flex;
+      color: var(--dark);
+      font-family: "Alef", sans-serif;
+      font-size: 2em;
+    }
+      
+
+  /******STYLER MEDIA OVER 800PX******/ 
+  @media(min-width: 800px) {
+    
+    .main-popup {
+      max-width: 50%; 
+      width: 100%; 
+      height: 100vh; 
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .popup-overlay {
+      background-color: var(--gul);
+      height: 100vh;
+      width: 100%;
+      position: absolute;
+      z-index: -1;
+      overflow-x: auto; 
+    }
+    
+    #andimg img{
+      width: 320px;
+      top: 70%;
+    }
+
+    #andimg h3 {
+      font-size: 4em;
+    }
+    /*  */
+    #morewordsmenu{
+      margin-top: 200%;
+    }
+
+    .menuitemname{
+      font-size: 1em;
+    }
+
+  /******** forside *******/
+   /* dingsefigur og multiwords på forside*/
+   .dingseukop {
+    width: 60%;
+  }
+  .multiwords{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    box-sizing: border-box;
+    margin-top: 5%;
+  }
+
+  .firexdingse {
+    margin-top: 25%;
+  }
+
+  .baggrunddingse {
+    background-color: #c7352a;
+  }
+
+    .broedforside{
+      display: none;
+    }
+
+    .brødforside {
+      object-fit: cover;
+      height: 600px;
+      width: 100%;
+    }
+
+    #lodretskrift, #lodretskrift2, #lodretskrift3{
+      font-size: 300%;
+    }
+
+    #sandwichul, #sodtul, #drikkeul{
+      line-height: 130%;
+    }
+
+  /* Styling af ekstra billeder til forsiden til desktop */
+    .desktopbilleder {
+      display: flex;
+      flex-direction: row;
+      margin-top: 5%;
+    }
+
+    .desktopbilleder img {
+      display: flex;
+      width: 65vh;
+      height: 45vh;
+      object-fit: cover;
+      overflow: hidden;
+    }
+    .brødforside {
+      display: none;
+    }
+  
+
+  /* midtersection på forside*/
+    .responsivetekst {
+      margin-left: 5%;
+      margin-right: 5%;
+      padding: 2%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-weight: 300;
+      font-size: 1.7em;
+    }
+
+    .responsivetekst {
+      display: flex;
+    }
+
+    #responsivetekst {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-weight: 300;
+      font-size: 1.5em;
+    }
+
+    #responsivetekst {
+      display: flex;
+    }
+
+    #responsivetekst1 {
+    display: none;
+    }
+
+    #responsivetekst2 {
+      display: none;
+    }
+
+    .midtersection {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; 
+      margin-top: 5%;
+    }
+
+    .alefdarkknap {
+      margin-top: 5%;
+    }
+
+  /* tekst til midtersection forside*/
+    .knap {
+      border: 2px solid #c7352a; 
+      padding-bottom: 2px; 
+    }
+
+  /* billeder på midtersection af forside*/
+    .udefraillustration {
+      width: 50%;
+      height: 50%;
+    }
+
+  /* instagram sektion forside */
+    .instagram {
+      margin-top: 10%;
+      
+    }
+
+    .foelgtekst {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .billedeserie1{
+      flex-direction: row;
+      gap: 20px;   
+    }
+
+    .foelgbilleder {
+    display: flex;
+    object-fit: cover;
+    width: 250px;
+    height: 250px;
+    }
+
+    .kursivtekst{
+      margin-left: 23%;
+      margin-right: 21%;
+      font-size: 3em;
+      text-align: center;
+    }
+
+  /* tekst til midtersection */
+  .knap {
+    border: 2px solid #c7352a; 
+    padding-bottom: 2px; 
+  }
+
+  /* billeder på midtersection */
+  .udefraillustration {
+    width: 50%;
+    height: 50%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+
+  /* instagram sektion */
+
+  .instagram {
+    margin-top: 10%;
+  }
+
+  .foelgtekst {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10%;
+    margin-right: 10%;
+    }
+
+    .foelgknap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+  /******** kontakt os *******/
+    #openhours {
+      font-size: 3rem;
+    }
+
+    .kursivtekst{
+      margin-left: 23%;
+      margin-right: 21%;
+      text-align: center;
+    }
+
+    .dingsetelefon {
+      width: 130%;
+      height: 100%;
+    }
+
+    .ringx4 {
+      margin-top: 35%;
+      font-size: 2rem;
+    }
+
+    .ringx4container {
+    width: 70%;
+    height: 70%;
+    }
+
+    .adresse-kontakt {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .kort-kontakt {
+      width: 55%;
+    }
+
+    .telefon-nummer-kontakt {
+      margin-left: 15%;
+      margin-right: 15%;
+    }
+
+    .coverbillede {
+      height: 60vh;
+      position: relative;
+    }
+
+    .coverkontakt {
+      position: absolute;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      left: 0;
+    }
+
+    #openhours {
+      font-size: 3rem;
+    }
+
+    .dingsetelefon {
+      width: 130%;
+      height: 100%;
+    }
+
+    .ringx4 {
+      margin-top: 35%;
+    }
+
+    .ringx4container {
+    width: 70%;
+    height: 70%;
+    }
+
+    .adresse-kontakt {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .kort-kontakt {
+      width: 55%;
+    }
+
+    .telefon-nummer-kontakt {
+      margin-left: 15%;
+      margin-right: 15%;
+    }
+
+    /***** Bagom *****/
+
+    /* læs mere knap */
+  
+    #indhold {
+      display: block !important;
+  }
+  #laesMereKnap, #lukKnap {
+    display: none !important;
+  }
+
+  }
+    /* bagom siden i media */
+    /* **** Styling af første del af bagom - Søren og olivia billede + tekst **** */
+    .bagom1 {
+      display: grid;
+    }
+
+    #mere {
+      padding-left: 1%;
+      padding-bottom: 3%;
+    }
+    
+    .bagom-ordx4 {
+      justify-self: center;
+      align-self: center;
+      font-size: 1.5rem;
+    }
+
+    .bagom1 h1 {
+      text-align: center;
+      padding-top: 2%; 
+      padding-bottom: 1%;
+    }
+    .bagom1 p {
+      padding: 2%;
+    }
+
+  /*  Styles med en anden class for at få korrekt opsætning */
+    .bagom1-desktop{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .bagom1 h1 {
+      justify-self: center;
+      align-self: center;
+    }
+
+    /* Styling af billedet af søren og olivia, billedet croppes til desktop*/
+    .bagom1 img{
+      width: 100%;
+      height: 80vh;
+      object-fit: cover;
+      object-position: top;
+    }
+
+    .fotomobil {
+      display: none;
+    }
+
+    .fotodesktop {
+      display: flex;
+    }
+}
+
+/* tekstcontainer bagom */
+@media(max-width: 800px) {
+  .firexdingse {
+    font-size: 1rem;
+    margin-top: 5%;
+  }
+
+  .read-more {
+      display: flex;
+      flex-direction: column; 
+      gap: 5px; 
+  }
+
+  .text {
+    text-align: justify;
+  }
+
+  .desktop_broed {
+    display: none;
+  }
+
+  .mobil_broed {
+    display: flex;
+    text-align: center;
+  }
+
+  .read-more-content {
+      display: flex;
+      flex-direction: column; 
+      align-items: center;
+      gap: 20px; 
+  }
+
+  .read-more-content img {
+      max-width: 100%; 
+      height: auto;
+  }
+
+  /* billeder bagomsiden */
+  .img {
+    width: 80%;
+    margin-top: -10%;
+  }
+
+  /* knapper foldud siden */
+  .fold_reply {
+   margin-left: 2%;
+   margin-top: 1%;
+  }
+  
+  .fold_btn1 {
+    margin-left: -3%;
+    margin-top: -1%;
+  }
+
+  .reply {
+    display: none; /* Hide the reply content initially */
+    background-color: var(--contrastbackground);
+    margin-bottom: 7%;
+    padding: 30px 0;
+  }
+
+  .fold_in_btn {
+    margin-top: 50px;
+  }
+
+  /* surdej foldud container */
+
+  .surdej5 {
+    object-fit: cover;
+    height: 50vh;
+    width: 35vh;
+    margin-top: -90px;
+}
+/* tekst til surdej foldud */
+
+#p_foldud {
+  text-align: justify;
+margin-right: 20%;
+}
+
+#h2_foldud {
+  font-size: 1.55rem;
+}
+
+#h3_foldud {
+  font-size: 2rem;
+}
+
+#h3_foldud_siden {
+  font-size: 2rem;
+}
+
+.p_foldud_info {
+  text-align: center;
+  margin-right: 50%;
+  margin-left: 20%;
+}
+
+.p_foldud_info_side {
+  text-align:center;
+  margin-right: 11%;
+  margin-left: 55%;
+}
+
+/* billeder til surdej foldud */
+.surdej5 {
+  object-fit: cover;
+  width: 100vh;
+  height: 20vh;
+}
+#fermentering_af_surdej {
+  width: 35%;
+  margin-left: 17%;
+  margin-top: -2%;
+  }
+  
+  #straek_og_fold_surdej {
+  width: 35%;
+  margin-left: 55%;
+  margin-top: -5;
+  }
+  
+  #bages_ved_hoej_varme {
+  width: 35%;
+  margin-left: 17%;
+  margin-top: -2%;
+  }
+
+    /* dingsevand foldud container */
+/* tekst til dingsevand foldud */
+
+#h2_hjemmelavet {
+  margin-top: 15%;
+}
+
+.dingsedrik_titel p {
+  font-size: 1rem;
+}
+
+.dingsedrik_titel {
+  margin-left: 5%;
+}
+
+    #dingsevand_figur {
+      width: 50%;
+      margin-left: 40%;
+      margin-top: -7%;
+      margin-bottom: 5%;
+    }
+    
+    .dingsevand-fotocontainer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px; 
+    }
+    
+    .dingsevand-fotocontainer img {
+      object-fit: cover;
+      width: 20vh;
+      height: 20vh;
+    }
+    
+    #dingsevand_illustration {
+      width: 50%;
+      height: auto;
+      margin-top: 3%;
+    }
+
+    .smagsvarianter {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px; 
+    }
+
+    .smagsvarianter div {
+        margin-bottom: 10px;
+    }
+
+    /* råvare foldud container */
+    /* tekst til foldud råvare */
+    #h2_foldud_raevare{
+      margin-top: 7%;
+      text-align: center;
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    .p_foldud_raevare {
+      font-size: 1rem;
+    }
+
+    .p_foldud_raevare_desk {
+      display: none;
+    }
+
+    .p_foldud_raevare_mobil{
+      margin-top: 5%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: justify;
+      margin-left: 20%;
+      margin-right: 20%;
+    }
+    /* billeder/video til foldud råvare */
+
+    .bagom-raevare{
+      width: 130%;
+      margin-left: -15%;
+    }
+    .oliven_container {
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+        gap: 10px;
+    }
+
+    .platte_container {
+      width: 60%;
+      margin-left: 20%;
+    }
+
+    .oliven_container img {
+        width: 50%; 
+        height: auto;
+    }
+
+    .tekstcontainer_olivenolie {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .instaicon {
+      width: 14%;
+      height: auto;
+      margin-left: 2%;
+    }
+}
+
+@media(min-width: 800px) {
+  .instaicon {
+    width: 5%;
+    height: auto;
+    margin-left: 2%;
+  }
+
+  .insta-container{
+    width: 80%;
+  }
+}
+  
+  
+  /******STYLER MEDIA OVER 1000PX******/ 
+  @media (min-width: 1000px) {
+    #andimg img{
+      top: 67%;
+      width: 300px;
+    }
+
+    #morewordsmenu {
+      margin-top: 180%;
+    }
+  }
+
+  /******STYLER MEDIA OVER 1100PX******/ 
+  @media (min-width: 1100px){
+    /*Øverste billed og tekst på menukort*/
+    /*Styler billedet*/
+    #andimg img{
+      width: 320px;
+      top: 70%;
+    }
+
+    /*Styler overskrifterne*/
+    #andimg h3 {
+      font-size: 4em;
+    }
+    
+    /*Styler hele sektionen*/
+    #morewordsmenu{
+      margin-top: 200%;
+    }
+
+    /*forside kursiv tekst*/
+    .kursivtekst{
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+
+    .midtersection{
+      margin-bottom: 0;
+    }
+
+    .instagram{
+      margin-top: 2%;
+    }
+
+    #bestilknapforside{
+      width: 200px;
+      font-size: 2em;
+
+    }
+
+    .bestilknapforside2{
+      width: 100px;
+    }
+
+    #bestilknapmenu{
+      width: 150px;
+    }
+
+  /* MENUKORT HTML */
+/* Opdeling af side */
+.leftside{
+  width: 50%;
+  background-color: var(--gul);
+}
+
+.rightside{
+  width: 50%;
+}
+
+
+  }
+
+  /******STYLER MEDIA OVER 1500PX******/ 
+
+  @media (min-width: 1500px) {
+    /*Menukort*/
+    #andimg img{
+      top: 57%;
+      width: 300px;
+    }
+
+    #morewordsmenu {
+      margin-top: 100%;
+    }
+
+    /*Forside*/
+    .desktopbilleder {
+      align-items: center;
+      justify-content: center;
+    }
+
+    .foelgbilleder {
+      width: 380px;
+      height: 380px;
+      }
+
+    .billedeserie1{
+      gap: 50px;
+    }
+
+    .kursivtekst{
+      font-size: 3em;
+    }
+
+  }
+    
+/* STYLING TIL DET DER IKKE KUNNE LAVES I MOBILEFIRST*/
+@media (max-width: 800px) {
+  /*Forsidevideo*/
+  .forside-video {
+    width: 100vh; /* Brug viewportets højde */
+    height: 100vw; /* Brug viewportets bredde */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(90deg); /* Ret roteringsværdien */
+  }
+
+  .hideOnMobile {
+    display: none;
+  }
+  
+  /*Menuknap og side menukort*/
+  .menu-button {
+    display: block;
+    font-size: 2em;
+  }
+  .sidebar {
+    display: flex;
+    display: none;
+    gap: 100px;
+    align-content: center;
+    width: 100%;
+  }
+
+  .sidebar a {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    text-decoration: none;
+    color: var(--red);
+    font-size: 2.3em;
+  }
+
+  /*burgermenu ul*/
+  .uller{
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    text-align: center;
+  }
+}
