@@ -501,7 +501,7 @@ nav li:first-child {
     }
     .logomenukort img{
       max-width: 100%;
-      height: 100px;
+      height: 80px;
       padding: 2%;
     }
     
@@ -1447,13 +1447,13 @@ nav li:first-child {
 /**************************************************/
 /************ Footer ************/
 footer {
-  background-color: #DDDFC7; 
+  background-color: var(--contrastbackground); 
   padding: 2rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   line-height: 1.8rem;
-  color: #3d0200;
+  color: var(--dark);
   width: 100%;
   box-sizing: border-box;
   bottom: 0;
@@ -1466,6 +1466,7 @@ footer {
   text-align: center;
   padding: 0;
   margin: 0;
+  margin-top: 10%;
 }
 
 .besøg {
@@ -1473,12 +1474,38 @@ footer {
 }
 
 .icon {
-  width: 3rem;
+  width: 2.5rem;
   margin-top: 7%;
   margin-bottom: 7%;
   margin-left: 1rem; 
   margin-right: 1rem; 
 } 
+
+.footernames{
+  font-size: 1.5em;
+  font-weight: 400;
+  font-family: "Alef", sans-serif;
+}
+
+iframe{
+  width: 300px;
+  height: 300px;
+  padding: 20px;
+  border: none;
+}
+
+#abenfooter{
+  font-size: 1.5em;
+  text-align: center;
+}
+.mininav{
+  font-size: 1.2em;
+  text-align: center;
+  font-weight: 400;
+  color: var(--dark);
+  text-decoration: none;
+}
+
 /* ************************************************ */
 
 /*/*Media Querey Computer*/
