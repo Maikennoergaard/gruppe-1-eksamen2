@@ -34,7 +34,8 @@ document.addEventListener('DOMContentLoaded', function() {
 // Vi definere alle vores variabler
   const menuButton = document.querySelector('.open-btn');
   const menuButton1 = document.getElementById('menu-button-burger');
-  const menuButton2 = document.getElementById('menu-button');
+  const menuButton2 = document.getElementById('menu-button-footer');
+  const menuButton3 = document.getElementById('menu-button');
   const popup = document.querySelector('.popup');
   const mainPopup = document.querySelector('.main-popup');
   const popupOverlay = document.querySelector('.popup-overlay');
@@ -75,12 +76,17 @@ closeButton.addEventListener('click', hidePopup);
   menuButton1.addEventListener('click', function (e) {
     e.preventDefault();
     showPopup();
-});
+  });
 
-menuButton2.addEventListener('click', function (e) {
-  e.preventDefault();
-  showPopup();
-});
+  menuButton2.addEventListener('click', function (e) {
+    e.preventDefault();
+    showPopup();
+  });
+  
+  menuButton3.addEventListener('click', function (e) {
+    e.preventDefault();
+    showPopup();
+  });
 
 ////////////// Menukort animationer
 
