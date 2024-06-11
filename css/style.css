@@ -510,7 +510,6 @@ nav li:first-child {
       display: flex;
       align-items: center;
       justify-content: space-around;
-      margin-bottom: 10%;
     }
     
     .logomenukort2 img{
@@ -1480,7 +1479,6 @@ footer {
   text-align: center;
   padding: 0;
   margin: 0;
-  margin-top: 10%;
 }
 
 .besøg {
@@ -1514,7 +1512,14 @@ iframe{
 }
 
 .mininav{
-  font-size: 1.2em;
+  text-align: center;
+}
+
+.mininav li{
+  margin-top: 10px;
+}
+
+.mininav a{
   text-align: center;
   font-weight: 400;
   color: var(--dark);
@@ -1525,11 +1530,14 @@ iframe{
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  margin-left: 20%;
 }
 .iconercomputer a{
   display: flex;
   flex-direction: row;
   align-items: center;
+  text-decoration: none;
+  color: var(--dark);
 }
 
 /* ************************************************ */
@@ -1681,10 +1689,32 @@ iframe{
     .menuitemname{
       font-size: 1em;
     }
-
+    /*footer*/
     .hideOnLaptop{
       display: none;
     }
+
+    footer{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    #abenfooter{
+      grid-column: 2;
+    }
+
+    .logomenukort2{
+      grid-column: 2;
+      grid-row: 2;
+    }
+
+    .mininav{
+      grid-column: 2;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    
 
   /******** forside *******/
   /* dingsefigur og multiwords på forside*/
