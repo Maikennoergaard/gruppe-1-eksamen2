@@ -815,10 +815,10 @@ nav li:first-child {
       width: fit-content;
     }
 
-    .ringx4 {
+    .ringx4 h3 {
       text-align: center;
       padding: 5%;
-      background-color: var(--background);
+      color: #c7352a;
     }
 
     .ringx4 h3 {
@@ -837,9 +837,23 @@ nav li:first-child {
       height: 35vh;
     }
 
+    .openhours-section p {
+      margin-bottom: 1%;
+    }
+
+    .openhours-section {
+      padding: 2%;
+      margin-top: 5%;
+    }
+
+    .ekstra-tekst {
+      margin-top: 5%;
+    }
+
     .foelgknap1 {
       margin: 5% 5%;
       }
+
 
 /**************************************************/
 /***************** Menukort i html ****************/
