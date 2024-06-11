@@ -1,0 +1,90 @@
+{
+    "menu": {
+      "Sandwiches": [
+        {
+          "name": "SERRANO",
+          "description": "fra 'Monte Nevado' (23 mdr.), basilikum, mozarella, pinjekerner & rucola",
+          "price": 89.0
+        },
+        {
+          "name": "KYLLING",
+          "description": "jalapenosvinaigrette, padrons, skalotteløg & rucola",
+          "price": 89.0
+        },
+        {
+          "name": "FOCACCIA",
+          "description": "mortadella, ricottacreme & ristede mandler",
+          "price": 89.0
+        },
+        {
+          "name": "'JAMBON BEURRE'",
+          "description": "dobbelt fermenteret smør, kogt italiensk skinke & conté (12 mdr.)",
+          "price": 89.0
+        },
+        {
+          "name": "ROSÉ REJER",
+          "description": "rød peber, chili & tomatiseret mayonaise, frisk agurk & rucola",
+          "price": 89.0
+        },
+        {
+          "name": "SALAD À LA PROVENCAL",
+          "description": "nye kartofler, modne tomater, oliven, skalotteløg, estragon, ramsløg & dijon vinaigrette",
+          "price": 89.0,
+          "vegetarian": true
+        }
+      ],
+      "Desserts": [
+        {
+          "name": "PETIT FOUR",
+          "description": "millionaire shortbread, sprød mørdej, chewy karamel & mørk chokolade",
+          "price": 15.0
+        },
+        {
+          "name": "TIRAMISU",
+          "description": "espresso, marsala & cognac",
+          "price": 20.0
+        }
+      ],
+      "Drinks": [
+        {
+          "name": "VAND",
+          "description": "Dansk vand / / Almindelig vand",
+          "price": 25.0
+        },
+        {
+          "name": "DINGSEVAND",
+          "description": "Vi blander vores egen Dingsevand, lavet af friskpresset juice og danskvand",
+          "price": 40.0
+        },
+        {
+          "name": "KAFFE",
+          "variations": [
+            {
+              "type": "ESPRESSO",
+              "price": 30.0
+            },
+            {
+              "type": "AMERICANO",
+              "price": 35.0
+            },
+            {
+              "type": "CORTADO",
+              "price": 35.0
+            },
+            {
+              "type": "CAPPUCHINO",
+              "price": 40.0
+            },
+            {
+              "type": "LATTE",
+              "price": 40.0
+            },
+            {
+              "type": "STOR LATTE",
+              "price": 50.0
+            }
+          ]
+        }
+      ]
+    }
+  }

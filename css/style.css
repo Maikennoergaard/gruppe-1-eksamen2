@@ -214,7 +214,6 @@ nav li:first-child {
   #menucard {
     display: flex;
     flex-direction: column;
-
   }
 
   .menuheader{
@@ -257,10 +256,10 @@ nav li:first-child {
   }
 
   #prismenu {
-    font-size: 2em;
+    font-size: 1em;
     margin-bottom: 5%;
     font-weight: 600;
-    font-family: "Annie Use Your Telescope", cursive;
+    font-family: "alef", cursive;
   }
 
   .bladicon{
@@ -339,6 +338,7 @@ nav li:first-child {
     font-size: 2em;
     font-weight: 100;
     margin-top: 20%;
+    display: flex;
   }
   
   /*lodret linje*/
