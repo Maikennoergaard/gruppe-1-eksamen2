@@ -749,7 +749,16 @@ nav li:first-child {
     align-items: center;
     text-align: center;
     flex-direction: column;
+    padding: 10%;
     }
+
+    .instagram-media {
+      height: 35vh;
+      width: auto;
+      padding: 5%;
+      margin-bottom: 5%;
+    }
+
 
     .foelgknap {
     display: flex;
@@ -1861,6 +1870,12 @@ iframe{
     .billedeserie1{
       flex-direction: row;
       gap: 20px;   
+      padding: 5% 7%;
+    }
+
+    .instagram-media {
+      height: 50vh;
+      width: 20vh;
     }
 
     .foelgbilleder {
@@ -1908,6 +1923,7 @@ iframe{
       display: flex;
       justify-content: center;
       align-items: center;
+      margin-top: -4%;
     }
 
   /******** kontakt os *******/

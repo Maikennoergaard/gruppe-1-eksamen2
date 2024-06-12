@@ -20,7 +20,7 @@ function toggleSidebar() {
   sidebar.classList.toggle('show');
 }
 
-// ///////////////// active button i nav baren 
+// ///////////////// active button i nav baren, viser effekt på den underside man er på 
 
 document.querySelectorAll('nav a').forEach(link => {
   link.addEventListener('click', function() {
