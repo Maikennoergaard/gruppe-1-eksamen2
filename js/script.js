@@ -20,6 +20,16 @@ function toggleSidebar() {
   sidebar.classList.toggle('show');
 }
 
+// ///////////////// active button i nav baren 
+
+document.querySelectorAll('nav a').forEach(link => {
+  link.addEventListener('click', function() {
+    document.querySelectorAll('nav a').forEach(link => link.classList.remove('active'));
+    this.classList.add('active');
+  });
+});
+
+
 //////////////////// Pil
 
 // Klikfunktion der scroller en vh ned ved klikk på gul pil
