@@ -1,4 +1,4 @@
-'uses trict';
+'uses strict';
 
 document.addEventListener("DOMContentLoaded", function() {
     fetch('menu.json')

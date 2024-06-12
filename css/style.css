@@ -135,9 +135,19 @@ nav a {
   color: var(--red);
 }
 
-nav a:hover {
-  border-radius: 10px;
+/* Tilføjer effekt i nav bar */
+
+nav a:hover, nav a.active {
+  background-color: var(--background); /* Skift til den ønskede farve */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Tilføjer en skyggeeffekt */
 }
+
+/* Fjerner hover effect fra logo */
+nav a.logo:hover {
+  background-color: transparent;
+  box-shadow: none;
+}
+
 
 nav li:first-child {
   margin-right: auto;
