@@ -206,8 +206,9 @@ nav a:active{
 .kigop {
   position: absolute;
   bottom: 0;
-  width: 250px;
+  width: 200px;
   right: 10px;
+  margin-bottom: 40px;
 }
 
 .bue1{
@@ -305,9 +306,9 @@ nav a:active{
   } 
 
   #bestilknapmenu:hover {
-    background-color: var(--contrastbackground); /* Change background color on hover */
-    box-shadow: 0 4px 15px #c7352a(0, 0, 0, 0.2); /* Add box shadow on hover */
-    transform: scale(1.05); /* Slightly enlarge the button on hover */
+    background-color: var(--contrastbackground); 
+    box-shadow: 0 4px 15px #c7352a(0, 0, 0, 0.2);
+    transform: scale(1.05);
     border-color: var(--red);
   }
 
@@ -383,7 +384,7 @@ nav a:active{
   .menuitemcontainer {
     display: flex;
     align-items: center; /* Justerer elementer vertikalt i midten */
-}
+  }
 
 .menuitemname {
     margin-right: 5px; /* Tilføjer lidt mellemrum mellem navnet og ikonet */
@@ -787,14 +788,13 @@ nav a:active{
     }
 
     .desktopbilleder img {
-      display: none;}
+      display: none;
+    }
 
 
 /**************************************************/
 /******************* Kontakt os *******************/ 
-
-
-  /* Styling af font med ID for at størrelserne passer */
+/* Styling af font med ID for at størrelserne passer */
 
   .openhours{
     font-size: 2em;
