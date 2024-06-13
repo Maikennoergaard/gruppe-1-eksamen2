@@ -2044,6 +2044,11 @@ iframe{
 
   /***** Bagom *****/
   /* læs mere knap */
+
+
+  .tekst_container_bagom {
+    margin-top: -3%;
+  }
   
   #indhold {
     display: block !important;
@@ -2077,7 +2082,8 @@ iframe{
       padding-bottom: 1%;
     }
     .bagom1 p {
-      padding: 2%;
+      padding: 1%;
+      margin-bottom: 6vh;
     }
 
   /*  Styles med en anden class for at få korrekt opsætning */
