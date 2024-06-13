@@ -769,14 +769,15 @@ nav li:first-child {
     align-items: center;
     text-align: center;
     flex-direction: column;
-    padding: 10%;
+    padding: 4% 20%;
+    margin: 2% 3%;
     }
 
     .instagram-media {
-      height: 35vh;
-      width: auto;
-      padding: 5%;
-      margin-bottom: 5%;
+      height: 33vh;
+      width: 33vh;
+      margin: 2% 30%;
+      padding: 5% 5%;
     }
 
 
@@ -1084,7 +1085,7 @@ nav li:first-child {
     }
 
     .faqer {
-      margin-bottom: 15%;
+      margin-bottom: 8%;
       margin-left: 10%;
       margin-right: 10%;
     }
@@ -1122,8 +1123,6 @@ nav li:first-child {
       text-align: center;
       justify-content: center;
       align-items: center;
-      margin-left: -84%;
-      margin-top: -10%;
     }
 
     .in{
@@ -1771,9 +1770,23 @@ iframe{
     .mininav{
       grid-column: 2;
       grid-row: 4;
-      display: flex;
-      justify-content: space-between;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
     }
+    .mininav a{
+      font-size: 1.1em;
+    }
+
+    .menukortmininav{
+      grid-column: 1;
+    }
+    .kontaktosmininav{
+      grid-column: 2;
+    }
+    .bagommininav{
+      grid-column: 3;
+    }
+
 
     
 
@@ -2174,7 +2187,7 @@ iframe{
   /* knapper foldud siden */
   .fold_reply {
    margin-left: 2%;
-   margin-top: 1%;
+   margin-top: 2%;
   }
   
   .fold_btn1 {
@@ -2337,10 +2350,7 @@ iframe{
     
     /* billeder/video til foldud råvare */
 
-    .bagom-raevare{
-      width: 130%;
-      margin-left: -15%;
-    }
+  
     .oliven_container {
         display: flex;
         flex-direction: column; 
