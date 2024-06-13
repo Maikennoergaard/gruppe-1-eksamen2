@@ -140,22 +140,19 @@ nav a {
   color: var(--dark);
 }
 
-/* Tilføjer effekt i nav bar */
-
-nav a:hover, nav a.active {
-  background-color: var(--background); /* Skift til den ønskede farve */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Tilføjer en skyggeeffekt */
+/*nav */ 
+/*Hover effect på navbar*/
+nav a:hover {
+  color:var(--red);
 }
 
-/* Fjerner hover effect fra logo */
-nav a.logo:hover {
-  background-color: transparent;
-  box-shadow: none;
+nav a:active{
+  color: var(--red);
 }
 
-
-nav li:first-child {
-  margin-right: auto;
+/* Nav bar faste farver på givne sider */
+.behindnav a, .contactnav  a{
+ color: var(--red);
 }
 
 /*burgermenu indhold*/
@@ -278,8 +275,6 @@ nav li:first-child {
   }
 
   /* kaffe te */
-
-
   .bladiconrow{
     display: flex;
     flex-direction: row;
@@ -801,11 +796,24 @@ nav li:first-child {
 
   /* Styling af font med ID for at størrelserne passer */
 
-  #openhours{
+  .openhours{
     font-size: 2em;
     display: flex;
     text-align: center;
     justify-content: center;
+  }
+
+  .openhoursul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 15%;
+  }
+
+  #times-list{
+    font-family: "Alef", sans-serif;
+    font-size: 1.3em;
   }
 
   #vibor, #adressekontakt{
@@ -1460,11 +1468,27 @@ nav li:first-child {
     .insta-container {
       display: flex;
       justify-content: center;
-      text-align: justify;
+      text-align: center;
+      align-items: center;
       flex-direction: column;
-      margin-top: 3%;
-      margin-left: 6%;
-      margin-right: 20%;
+      margin-top: 7%;
+    }
+
+    .insta-container a{
+      font-size: 1.2em;
+    }
+
+    .icongalleri {
+      width: 2.5rem;
+      margin-right: 1rem; 
+    } 
+
+    .iconergalleri a{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      text-decoration: none;
+      color: var(--dark);
     }
 
 
@@ -1564,6 +1588,7 @@ iframe{
   justify-content: center;
 }
 
+/* Mini nav i footer */
 .mininav{
   text-align: center;
 }
@@ -1585,12 +1610,23 @@ iframe{
   align-items: flex-start;
   margin-left: 25%;
 }
+
 .iconercomputer a{
   display: flex;
   flex-direction: row;
   align-items: center;
   text-decoration: none;
   color: var(--dark);
+}
+
+/*Hover effect på navbar i footer*/
+.mininav a:hover, .kortcom a:hover, .info-container1 a:hover, .iconergalleri a:hover{
+  color:var(--red);
+}
+
+/* Nav bar faste farver på givne sider */
+.behindnav a, .contactnav a{
+ color: var(--red);
 }
 
 /* ************************************************ */
@@ -2346,12 +2382,10 @@ iframe{
       margin-left: 20%;
       margin-right: 20%;
     }
+    
     /* billeder/video til foldud råvare */
 
-    .bagom-raevare{
-      width: 130%;
-      margin-left: -15%;
-    }
+  
     .oliven_container {
         display: flex;
         flex-direction: column; 
@@ -2387,10 +2421,6 @@ iframe{
     width: 5%;
     height: auto;
     margin-left: 2%;
-  }
-
-  .insta-container{
-    width: 80%;
   }
 }
 
