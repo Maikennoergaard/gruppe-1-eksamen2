@@ -45,6 +45,29 @@ document.addEventListener("DOMContentLoaded", function() {
                     });
 
                     drikkeList.appendChild(coffeeItem);
+                } else if (item.name === "DINGSEVAND") {
+                    // Handle DINGSEVAND specially to include taste
+                    const listItem = document.createElement('li');
+
+                    // Create and append the name
+                    const itemName = document.createElement('h4');
+                    itemName.className = 'menuitemname';
+                    itemName.textContent = item.name;
+                    listItem.appendChild(itemName);
+
+                    // Create and append the description
+                    const itemDescription = document.createElement('p');
+                    itemDescription.className = 'menuitemtxt';
+                    itemDescription.textContent = item.description;
+                    listItem.appendChild(itemDescription);
+
+                    // Create and append the taste
+                    const itemTaste = document.createElement('p');
+                    itemTaste.className = 'menuitemtxt';
+                    itemTaste.textContent = item.taste;
+                    listItem.appendChild(itemTaste);
+
+                    drikkeList.appendChild(listItem);
                 } else {
                     const listItem = createMenuItem(item.name, item.description);
                     drikkeList.appendChild(listItem);
@@ -71,7 +94,7 @@ document.addEventListener("DOMContentLoaded", function() {
         if (isVegetarian) {
             const vegetarianIcon = document.createElement('img');
             vegetarianIcon.className = 'bladicon';
-            vegetarianIcon.src = '/img/icon/blad.webp';
+            vegetarianIcon.src = '/img/icon/bladgroen.png';
             vegetarianIcon.alt = 'vegetar icon';
             vegetarianIcon.style.marginLeft = '0.5em';
             nameContainer.appendChild(vegetarianIcon);
@@ -90,6 +113,7 @@ document.addEventListener("DOMContentLoaded", function() {
         return listItem;
     }
 });
+
 
 
 
