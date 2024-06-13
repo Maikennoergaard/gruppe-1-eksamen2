@@ -262,10 +262,11 @@ nav li:first-child {
     font-family: "alef", cursive;
   }
 
+  /* kaffe te */
+
   .bladicon{
     height: 30px;
-    padding: 1%;
-    margin-left: 7%;
+    
   }
 
   .bladiconrow{
@@ -371,6 +372,24 @@ nav li:first-child {
   #provencal{
     margin-bottom: 0;
   }
+
+  /* Vegetar icon */
+  .menuitemcontainer {
+    display: flex;
+    align-items: center; /* Justerer elementer vertikalt i midten */
+}
+
+.menuitemname {
+    margin-right: 5px; /* Tilføjer lidt mellemrum mellem navnet og ikonet */
+}
+
+.bladicon {
+    width: 20px; /* Juster størrelsen af ​​ikonet efter behov */
+    height: 20px;
+    /* padding: 0 0 4px 4px; */
+    margin-left: 10px;
+}
+
 
   /*Styling af menukort animation*/
   .hidden{
