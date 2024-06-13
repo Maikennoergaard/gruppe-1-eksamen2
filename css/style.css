@@ -1147,9 +1147,10 @@ nav a:active{
       text-align: center;
       cursor: pointer;
       width: 8em;
+      margin-right: 53%;
     }
 
-    .fold_btn1 {
+    .fold_btn_dingse {
       padding: 5px 10px;
       margin: 10px 0;
       background-color: var(--contrastbackground);
@@ -1158,8 +1159,8 @@ nav a:active{
       text-align: center;
       cursor: pointer;
       width: 8em;
-      margin-left: 92% ;
-      margin-left: 90% ;}
+      margin-left: 50%;
+    }
 
     .fold_in_btn {
       display: block;
@@ -1179,13 +1180,11 @@ nav a:active{
       100% { transform: translateY(0) rotate(225deg); }
     }
 
-
-
     .reply {
       display: none; /* Hide the reply content initially */
       background-color: var(--contrastbackground);
-      margin-bottom: 7%;
-      padding: 11% 0 3% 0;
+      margin: 0% 5% 7% 5%;
+      padding: 0% 0% 3% 0%;
     }
 
   /* Styling af fold ud siderne */
