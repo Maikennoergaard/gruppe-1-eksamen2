@@ -1770,9 +1770,23 @@ iframe{
     .mininav{
       grid-column: 2;
       grid-row: 4;
-      display: flex;
-      justify-content: space-between;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
     }
+    .mininav a{
+      font-size: 1.1em;
+    }
+
+    .menukortmininav{
+      grid-column: 1;
+    }
+    .kontaktosmininav{
+      grid-column: 2;
+    }
+    .bagommininav{
+      grid-column: 3;
+    }
+
 
     
 
