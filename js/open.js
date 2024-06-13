@@ -47,10 +47,13 @@ function updateOpeningTimes(openingHours) {
 
     // Check if the place is closed today
     if (todayOpeningTime.toLowerCase().includes('closed')) {
-        openingTimesElement.textContent = 'We are closed today.';
+    openingTimesElement.textContent = 'Vi har lukket i dag.';
     } else {
-        openingTimesElement.textContent = `Today's opening times: ${todayOpeningTime}`;
+    // Extract just the opening time from todayOpeningTime
+    let openingTime = todayOpeningTime.split(': ')[1]; // Assuming format is "Monday: 9:00 AM – 5:00 PM"
+    openingTimesElement.textContent = `Vi har åben i dag fra ${openingTime}.`;
     }
+
 }
 
 

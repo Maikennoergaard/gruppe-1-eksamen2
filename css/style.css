@@ -801,11 +801,24 @@ nav li:first-child {
 
   /* Styling af font med ID for at størrelserne passer */
 
-  #openhours{
+  .openhours{
     font-size: 2em;
     display: flex;
     text-align: center;
     justify-content: center;
+  }
+
+  .openhoursul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 15%;
+  }
+
+  #times-list{
+    font-family: "Alef", sans-serif;
+    font-size: 1.3em;
   }
 
   #vibor, #adressekontakt{
