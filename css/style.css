@@ -1535,6 +1535,17 @@ footer {
   font-family: "Alef", sans-serif;
 }
 
+.footerheader{
+  display: grid;
+  grid-row: 3;
+}
+
+.footernames1{
+  display: grid;
+  grid-column: 1;
+  grid-row: 2;
+}
+
 iframe{
   width: 300px;
   height: 300px;
