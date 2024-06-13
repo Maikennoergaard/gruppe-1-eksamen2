@@ -272,10 +272,11 @@ nav li:first-child {
     font-family: "alef", cursive;
   }
 
+  /* kaffe te */
+
   .bladicon{
     height: 30px;
-    padding: 1%;
-    margin-left: 7%;
+    
   }
 
   .bladiconrow{
@@ -381,6 +382,24 @@ nav li:first-child {
   #provencal{
     margin-bottom: 0;
   }
+
+  /* Vegetar icon */
+  .menuitemcontainer {
+    display: flex;
+    align-items: center; /* Justerer elementer vertikalt i midten */
+}
+
+.menuitemname {
+    margin-right: 5px; /* Tilføjer lidt mellemrum mellem navnet og ikonet */
+}
+
+.bladicon {
+    width: 20px; /* Juster størrelsen af ​​ikonet efter behov */
+    height: 20px;
+    /* padding: 0 0 4px 4px; */
+    margin-left: 10px;
+}
+
 
   /*Styling af menukort animation*/
   .hidden{
@@ -749,7 +768,16 @@ nav li:first-child {
     align-items: center;
     text-align: center;
     flex-direction: column;
+    padding: 10%;
     }
+
+    .instagram-media {
+      height: 35vh;
+      width: auto;
+      padding: 5%;
+      margin-bottom: 5%;
+    }
+
 
     .foelgknap {
     display: flex;
@@ -780,15 +808,6 @@ nav li:first-child {
 
   #vibor, #adressekontakt{
     font-size: 2em;
-  }
-
-  /* Styling af tekst + padding */
-
-  .kontakt-main {
-    display: flex;
-    flex-direction: column;
-    gap: 2%;
-    text-align: center;
   }
 
   /* Styling af billeder på kontakt siden */
@@ -823,9 +842,11 @@ nav li:first-child {
 
   .telefon-nummer-kontakt {
     padding: 5%;
+    text-align: center;
   }
   .telefon-nummer-kontakt h2 {
     margin-bottom: 3%;
+    margin-top: 3%;
   }
 
   /* Styling af ring tekst + dingsedame med telefon. Da dette er en lidt anden styling end en colum bruges inline grid */
@@ -844,16 +865,16 @@ nav li:first-child {
       color: #c7352a;
     }
 
-    .ringx4 h3 {
+    /* .ringx4 h3 {
       opacity: 0;
       transform: translateY(20px); /* Startposition under deres endelige destination */
-      transition: opacity 0.2s ease-out, transform 0.2s ease-out;
-    }
+      /* transition: opacity 0.2s ease-out, transform 0.2s ease-out;
+    } */
 
-    .ringx4 h3.visible {
+    /* .ringx4 h3.visible {
       opacity: 1;
       transform: translateY(0); /* Endelig position */
-    }
+    /* }  */
 
     .dingsetelefon {
       width: auto;
@@ -862,6 +883,11 @@ nav li:first-child {
 
     .openhours-section p {
       margin-bottom: 1%;
+      text-align: center;
+    }
+
+    .openhours-section h1 {
+      margin-bottom: 3%;
     }
 
     .openhours-section {
@@ -1864,6 +1890,12 @@ iframe{
     .billedeserie1{
       flex-direction: row;
       gap: 20px;   
+      padding: 5% 7%;
+    }
+
+    .instagram-media {
+      height: 50vh;
+      width: 20vh;
     }
 
     .foelgbilleder {
@@ -1911,6 +1943,7 @@ iframe{
       display: flex;
       justify-content: center;
       align-items: center;
+      margin-top: -4%;
     }
 
   /******** kontakt os *******/
@@ -1922,21 +1955,6 @@ iframe{
       margin-left: 23%;
       margin-right: 21%;
       text-align: center;
-    }
-
-    .dingsetelefon {
-      width: 130%;
-      height: 100%;
-    }
-
-    .ringx4 {
-      margin-top: 35%;
-      font-size: 2rem;
-    }
-
-    .ringx4container {
-    width: 70%;
-    height: 70%;
     }
 
     .adresse-kontakt {
@@ -1972,19 +1990,25 @@ iframe{
       font-size: 3rem;
     }
 
-    .dingsetelefon {
-      width: 130%;
-      height: 100%;
-    }
-
-    .ringx4 {
-      margin-top: 35%;
-    }
-
     .ringx4container {
-    width: 70%;
-    height: 70%;
-    }
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding: 0%;
+      margin: 0 0;
+      width: 100%;
+  }
+
+  .dingsetelefon {
+    width: auto;
+    height: 60vh;
+  }
+
+  .ringx4 h3 {
+    text-align: center;
+    padding: 0%;
+    margin-left: 30%;
+    font-size: 2,5em;
+  }
 
     .adresse-kontakt {
       display: flex;
@@ -1994,7 +2018,12 @@ iframe{
     }
 
     .kort-kontakt {
-      width: 55%;
+      padding: 3% 5%;
+      width: 70%;
+    }
+
+    .openhours-section {
+      margin-top: 1%;
     }
 
     .telefon-nummer-kontakt {
@@ -2102,7 +2131,7 @@ iframe{
   }
 
   .read-more-content img {
-    max-width: 100%; 
+    max-width: 50%; 
     height: auto;
   }
 
