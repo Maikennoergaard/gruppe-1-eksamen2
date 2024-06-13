@@ -1109,7 +1109,7 @@ nav li:first-child {
 
     .img {
       background-color: var(--background);
-      width: 50%;
+      width: 35%;
       padding: 20px;
       box-sizing: border-box;
     }
