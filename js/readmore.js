@@ -1,30 +1,44 @@
 'use strict';
 
-// Når DOM'en er indlæst, udføres følgende:
 document.addEventListener("DOMContentLoaded", function() {
-  var foldReplyElements = document.querySelectorAll(".fold_reply");
+    // Function to scroll to the target element with the specified class
+    function scrollToElement(className) {
+        const targetElement = document.querySelector(`.${className}`);
+        if (targetElement) {
+            targetElement.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
 
- // For hvert "fold_reply" element, tilføj en klikhændelse
-  foldReplyElements.forEach(function(foldReply) {
-      foldReply.addEventListener("click", function() {
-
-            // Hent værdien af "data-target" attributten for det klikkede element
+    // Add click event listeners to all elements with class 'fold_reply'
+    var foldReplyElements = document.querySelectorAll(".fold_reply");
+    foldReplyElements.forEach(function(foldReply) {
+        foldReply.addEventListener("click", function() {
+            // Get the value of "data-target" attribute for the clicked element
             var targetClass = foldReply.getAttribute("data-target");
 
-            // Find det element, der har klassen, der er angivet i "data-target"
+            // Find the element with the class specified in "data-target"
             var targetElement = document.querySelector(targetClass);
 
-            // Gem alle andre svarsektioner ved at fjerne klassen "visible"
+            // Toggle visibility of the target element
             document.querySelectorAll(".reply").forEach(function(reply) {
-              if (reply !== targetElement) {
-                  reply.classList.remove("visible");
-              }
-          });
+                if (reply !== targetElement) {
+                    reply.classList.remove("visible");
+                }
+            });
+            targetElement.classList.toggle("visible");
 
-          targetElement.classList.toggle("visible");
-      });
-  });
+            // Scroll to the target element with class 'tekst_foldud_bagom'
+            if (targetElement.classList.contains("visible")) {
+                scrollToElement('tekst_foldud_bagom');}
+            if (targetElement.classList.contains("visible")) {
+                scrollToElement('dingsedrik_titel');}
+            if (targetElement.classList.contains("visible")) {
+                scrollToElement('raevare-video');
+            }
+        });
+    });
 });
+
 
 // læs mere knap
 document.getElementById("laesMereKnap").addEventListener("click", function() {

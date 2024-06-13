@@ -1104,6 +1104,7 @@ nav a:active{
       margin-bottom: 10px;
     }
 
+    /* Styling af tekst kasserne på fold ud siden */
     .text {
       background-color: var(--background);
       width: 50%;
@@ -1112,6 +1113,8 @@ nav a:active{
       box-sizing: border-box;
       line-height: 2rem;
     }
+
+
 
     .mobil_broed {
       display: none;
@@ -1236,13 +1239,6 @@ nav a:active{
       .p_foldud_info_side {
       margin-left: 60%;
       margin-right: 20%;
-      }
-
-      .tekst_foldud_bagom {
-        margin-top: 5%;
-        margin-left: 10%;
-        margin-right: 10%;
-        margin-bottom: 10%;
       }
 
     /* billeder foldud bagom surdej */
