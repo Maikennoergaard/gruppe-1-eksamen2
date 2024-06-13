@@ -135,6 +135,11 @@ nav a {
   color: var(--red);
 }
 
+.kortcom a{
+  text-decoration: none;
+  color: var(--dark);
+}
+
 /* Tilføjer effekt i nav bar */
 
 nav a:hover, nav a.active {
@@ -274,10 +279,6 @@ nav li:first-child {
 
   /* kaffe te */
 
-  .bladicon{
-    height: 30px;
-    
-  }
 
   .bladiconrow{
     display: flex;
@@ -394,10 +395,10 @@ nav li:first-child {
 }
 
 .bladicon {
-    width: 20px; /* Juster størrelsen af ​​ikonet efter behov */
-    height: 20px;
-    /* padding: 0 0 4px 4px; */
+    width: 25px;
+    height: 25px;
     margin-left: 10px;
+    margin-bottom: 7px;
 }
 
 
@@ -1514,6 +1515,7 @@ footer {
   text-align: center;
   padding: 0;
   margin: 0;
+  grid-row: 3;
 }
 
 .besøg {
@@ -1532,23 +1534,28 @@ footer {
   font-size: 1.5em;
   font-weight: 400;
   font-family: "Alef", sans-serif;
+  justify-content: center;
+  margin-bottom: 0;
 }
 
 .footerheader{
-  display: grid;
-  grid-row: 3;
+  grid-row: 2;
 }
 
-.footernames1{
-  display: grid;
+.footername1{
   grid-column: 1;
+  grid-row: 2;
+}
+
+.footername2{
+  grid-column: 3;
   grid-row: 2;
 }
 
 iframe{
   width: 300px;
-  height: 300px;
-  padding: 20px;
+  height: 250px;
+  padding-top: 23px;
   border: none;
 }
 
@@ -1577,7 +1584,7 @@ iframe{
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-left: 20%;
+  margin-left: 25%;
 }
 .iconercomputer a{
   display: flex;
@@ -1714,6 +1721,11 @@ iframe{
       font-family: "Alef", sans-serif;
       font-size: 2em;
     }
+
+  .bladicon {
+    width: 30px;
+    height: 30px;
+  }
       
   }
   /******STYLER MEDIA OVER 800PX******/ 
@@ -1752,14 +1764,29 @@ iframe{
 
     .logomenukort2{
       grid-column: 2;
-      grid-row: 2;
+      grid-row: 3;
     }
 
     .mininav{
       grid-column: 2;
-      display: flex;
-      justify-content: space-between;
+      grid-row: 4;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
     }
+    .mininav a{
+      font-size: 1.1em;
+    }
+
+    .menukortmininav{
+      grid-column: 1;
+    }
+    .kontaktosmininav{
+      grid-column: 2;
+    }
+    .bagommininav{
+      grid-column: 3;
+    }
+
 
     
 
