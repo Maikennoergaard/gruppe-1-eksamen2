@@ -1608,7 +1608,7 @@ iframe{
 }
 
 /*Hover effect på navbar i footer*/
-.mininav a:hover, .kortcom a:hover, .info-container1 a:hover{
+.mininav a:hover, .kortcom a:hover, .info-container1 a:hover, .iconergalleri a:hover{
   color:var(--red);
 }
 
