@@ -279,10 +279,6 @@ nav li:first-child {
 
   /* kaffe te */
 
-  .bladicon{
-    height: 30px;
-    
-  }
 
   .bladiconrow{
     display: flex;
@@ -399,10 +395,10 @@ nav li:first-child {
 }
 
 .bladicon {
-    width: 20px; /* Juster størrelsen af ​​ikonet efter behov */
-    height: 20px;
-    /* padding: 0 0 4px 4px; */
+    width: 25px;
+    height: 25px;
     margin-left: 10px;
+    margin-bottom: 7px;
 }
 
 
@@ -1726,6 +1722,11 @@ iframe{
       font-family: "Alef", sans-serif;
       font-size: 2em;
     }
+
+  .bladicon {
+    width: 30px;
+    height: 30px;
+  }
       
   }
   /******STYLER MEDIA OVER 800PX******/ 
