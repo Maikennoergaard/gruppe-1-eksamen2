@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function() {
             if (targetElement.classList.contains("visible")) {
                 scrollToElement('dingsedrik_titel');}
             if (targetElement.classList.contains("visible")) {
-                scrollToElement('raevare-video');
+                scrollToElement('bagom-raevare');
             }
         });
     });
