@@ -1519,6 +1519,7 @@ iframe{
 #abenfooter{
   font-size: 1.5em;
   text-align: center;
+  justify-content: center;
 }
 
 .mininav{
