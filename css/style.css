@@ -875,16 +875,16 @@ nav a:active{
       color: #c7352a;
     }
 
-    /* .ringx4 h3 {
+     .ringx4 h3 {
       opacity: 0;
       transform: translateY(20px); /* Startposition under deres endelige destination */
-      /* transition: opacity 0.2s ease-out, transform 0.2s ease-out;
-    } */
+      transition: opacity 0.2s ease-out, transform 0.2s ease-out;
+    } 
 
-    /* .ringx4 h3.visible {
+    .ringx4 h3.visible {
       opacity: 1;
       transform: translateY(0); /* Endelig position */
-    /* }  */
+     }  
 
     .dingsetelefon {
       width: auto;
