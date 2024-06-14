@@ -206,8 +206,9 @@ nav a:active{
 .kigop {
   position: absolute;
   bottom: 0;
-  width: 250px;
+  width: 200px;
   right: 10px;
+  margin-bottom: 40px;
 }
 
 .bue1{
@@ -305,9 +306,9 @@ nav a:active{
   } 
 
   #bestilknapmenu:hover {
-    background-color: var(--contrastbackground); /* Change background color on hover */
-    box-shadow: 0 4px 15px #c7352a(0, 0, 0, 0.2); /* Add box shadow on hover */
-    transform: scale(1.05); /* Slightly enlarge the button on hover */
+    background-color: var(--contrastbackground); 
+    box-shadow: 0 4px 15px #c7352a(0, 0, 0, 0.2);
+    transform: scale(1.05);
     border-color: var(--red);
   }
 
@@ -383,7 +384,7 @@ nav a:active{
   .menuitemcontainer {
     display: flex;
     align-items: center; /* Justerer elementer vertikalt i midten */
-}
+  }
 
 .menuitemname {
     margin-right: 5px; /* Tilføjer lidt mellemrum mellem navnet og ikonet */
@@ -787,14 +788,13 @@ nav a:active{
     }
 
     .desktopbilleder img {
-      display: none;}
+      display: none;
+    }
 
 
 /**************************************************/
 /******************* Kontakt os *******************/ 
-
-
-  /* Styling af font med ID for at størrelserne passer */
+/* Styling af font med ID for at størrelserne passer */
 
   .openhours{
     font-size: 2em;
@@ -1104,6 +1104,7 @@ nav a:active{
       margin-bottom: 10px;
     }
 
+    /* Styling af tekst kasserne på fold ud siden */
     .text {
       background-color: var(--background);
       width: 50%;
@@ -1112,6 +1113,8 @@ nav a:active{
       box-sizing: border-box;
       line-height: 2rem;
     }
+
+
 
     .mobil_broed {
       display: none;
@@ -1147,9 +1150,10 @@ nav a:active{
       text-align: center;
       cursor: pointer;
       width: 8em;
+      margin-right: 53%;
     }
 
-    .fold_btn1 {
+    .fold_btn_dingse {
       padding: 5px 10px;
       margin: 10px 0;
       background-color: var(--contrastbackground);
@@ -1158,8 +1162,8 @@ nav a:active{
       text-align: center;
       cursor: pointer;
       width: 8em;
-      margin-left: 92% ;
-      margin-left: 90% ;}
+      margin-left: 50%;
+    }
 
     .fold_in_btn {
       display: block;
@@ -1179,13 +1183,11 @@ nav a:active{
       100% { transform: translateY(0) rotate(225deg); }
     }
 
-
-
     .reply {
       display: none; /* Hide the reply content initially */
       background-color: var(--contrastbackground);
-      margin-bottom: 7%;
-      padding: 11% 0 3% 0;
+      margin: 0% 5% 7% 5%;
+      padding: 0% 0% 3% 0%;
     }
 
   /* Styling af fold ud siderne */
@@ -1204,28 +1206,23 @@ nav a:active{
         margin-bottom: 2%;
       }
 
-      #h2_foldud {
-      font-weight: 100;
-      margin-bottom: -7%;
-      }
-
       #h3_foldud {
-      font-size: 3rem;
-      color: #c7352a;
+      font-size: 1.5rem;
+      color: var(--dark);
       margin-left: 22%;
       margin-bottom: 1%;
       }
 
       #h3_foldud_siden {
-        font-size: 3rem;
-        color: #c7352a;
+        font-size: 1.5rem;
+        color: var(--dark);
         margin-left: 58%;
         margin-top: -5%;
         }
 
       #p_foldud {
-        margin-right: 30%;
-        margin-bottom: 5%;
+        text-align: center;
+        margin: 2% 3%;
       }
 
       .p_foldud_info {
@@ -1239,19 +1236,11 @@ nav a:active{
       margin-right: 20%;
       }
 
-      .tekst_foldud_bagom {
-        margin-top: 5%;
-        margin-left: 10%;
-        margin-right: 10%;
-        margin-bottom: 10%;
-      }
-
     /* billeder foldud bagom surdej */
       .surdej5 {
         object-fit: cover;
-        height: 50vh;
+        height: 40vh;
         width: 35vh;
-        margin-top: -180px;
       }
 
       #fermentering_af_surdej {
@@ -1280,15 +1269,31 @@ nav a:active{
 
   /* dingsevand foldud side */
 
+  /* Styling af første del med tekst + figur */
+
+  .dingsevand-figur-og-tekst {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+  }
+
+  #dingsevand_figur {
+    width: 35vh;
+    padding: 2%;
+  } 
+
+  .dingsedrik_titel {
+    display: flex;
+    flex-direction: column;
+
+  }
+
     /* tekst til folud dingsevand */
 
-      .dingsedrik_titel {
-        margin-top: -8%;
-        margin-left: 10%;
-      }
-
       #h2_hjemmelavet {
-        font-weight: 100;
+        padding-top: 5%;
+        padding-bottom: 5%;
+        text-align: center;
       }
 
       .p_foldud_dingsevand {
@@ -1306,19 +1311,14 @@ nav a:active{
         justify-content: center;
         align-items: center;
         text-align: center;
-        margin-left: 20.5%;
+        margin-left: 22.5%;
         margin-right: 20.5%;
         margin-top: 5%;
+        padding: 1%;
       }
 
 
     /* billeder foldud dingsevand */
-      #dingsevand_figur {
-        width: 40%;
-        margin-left: 50%;
-        margin-top: -7%;
-        margin-bottom: 5%;
-      }
 
       .dingsevand-fotocontainer {
         display: flex;
@@ -1368,15 +1368,9 @@ nav a:active{
   /* råvarer foldud side */
     /* tekst i folud råvare */
       #h2_foldud_raevare {
-        font-weight: 100;
-        margin-top: -7%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         text-align: center;
-        margin-left: 17%;
-        margin-right: 17%;
-        margin-bottom: 5%;
+        padding-top: 5%;
+        padding-bottom: 5%;
       }
 
       .p_foldud_raevare_mobil {
@@ -1621,7 +1615,7 @@ iframe{
 }
 
 /*Hover effect på navbar i footer*/
-.mininav a:hover, .kortcom a:hover, .info-container1 a:hover{
+.mininav a:hover, .kortcom a:hover, .info-container1 a:hover, .iconergalleri a:hover{
   color:var(--red);
 }
 
@@ -2252,13 +2246,18 @@ iframe{
   }
 /* tekst til surdej foldud */
 
+#proces-tekst {
+  text-align: center;
+}
+
   #p_foldud {
     text-align: justify;
     margin-right: 20%;
   }
 
   #h2_foldud {
-    font-size: 1.55rem;
+    font-size: 2rem;
+    margin-left: 20%;
   }
 
   #h3_foldud {
@@ -2309,24 +2308,13 @@ iframe{
 /* tekst til dingsevand foldud */
 
 #h2_hjemmelavet {
-  margin-top: 15%;
+  padding-top: 5%;
 }
 
 .dingsedrik_titel p {
   font-size: 1rem;
 }
 
-.dingsedrik_titel {
-  margin-left: 5%;
-}
-
-    #dingsevand_figur {
-      width: 50%;
-      margin-left: 40%;
-      margin-top: -7%;
-      margin-bottom: 5%;
-    }
-    
     .dingsevand-fotocontainer {
       display: flex;
       justify-content: center;
@@ -2360,10 +2348,8 @@ iframe{
     /* råvare foldud container */
     /* tekst til foldud råvare */
     #h2_foldud_raevare{
-      margin-top: 7%;
+      margin-top: 20%;
       text-align: center;
-      margin-left: 0;
-      margin-right: 0;
     }
 
     .p_foldud_raevare {
