@@ -25,37 +25,54 @@ body{
 
 
 /*Font styling*/
-h3{
-  display: flex;
+  h3{
+    display: flex;
+    color: var(--dark);
+    font-family: "Alef", sans-serif;
+  }
+
+  h4{
+    display: flex;
+    color: var(--dark);
+    font-family: "Alef", sans-serif;
+    margin-bottom: 2%;
+  }
+
+  p{
+    color: var(--dark);
+    font-family: "Alef", sans-serif;
+    font-size: 0.8em;
+  }
+
+  /*Rød stor font - bliver brugt x4*/
+  .alefred{
+    color: var(--red);
+    font-size: 1.5em;
+    font-family: "Alef", sans-serif;
+  }
+
+  /*Almindelig font mørk*/
+  .alefdark{
   color: var(--dark);
   font-family: "Alef", sans-serif;
-}
+  font-size: 1.3em;
+  font-weight: 300;
+  }
 
-h4{
-  display: flex;
+  /*Håndskrevet font - citater*/
+  .annielille{
   color: var(--dark);
-  font-family: "Alef", sans-serif;
-  margin-bottom: 2%;
-}
-
-p{
+  font-size: 1.4em;
+  font-weight: 200;
+  font-family: "Annie Use Your Telescope", cursive;
+  }
+  
+  /*Håndskrevet font - overskrifter*/
+  .anniestor{
   color: var(--dark);
-  font-family: "Alef", sans-serif;
-  font-size: 0.8em;
-}
-
-/*Rød stor font - bliver brugt x4*/
-.alefred{
-  color: var(--red);
-  font-size: 2.5em;
-  font-family: "Alef", sans-serif;
-}
-
-/*Almindelig font mørk*/
-.alefdark{
-color: var(--dark);
-font-family: "Alef", sans-serif;
-}
+  font-size: 2em;
+  font-family: "Annie Use Your Telescope", cursive;
+  }
 
 /*gennemgående knapper*/
 .alefdarkknap{
@@ -70,157 +87,135 @@ font-family: "Alef", sans-serif;
   margin-bottom: 7%;
 }
 
-/*Håndskrevet font - citater*/
-.annielille{
-color: var(--dark);
-font-size: 1.5em;
-font-family: "Annie Use Your Telescope", cursive;
-}
 
-/*Håndskrevet font - overskrifter*/
-.anniestor{
-color: var(--dark);
-font-size: 2em;
-font-family: "Annie Use Your Telescope", cursive;
-}
 
 /* Navbar */
-header{
-  position: sticky; 
-  width: 100%;
-  top: 0;
-  z-index: 10;
-  background-color: var(--contrastbackground);
-  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
-  overflow: auto;
-}
+  header{
+    position: sticky; 
+    width: 100%;
+    top: 0;
+    z-index: 10;
+    background-color: var(--contrastbackground);
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    overflow: auto;
+  }
 
-.logo img {
-  width: 100px;
-  height: auto;
-}
+  .logo img {
+    width: 100px;
+    height: auto;
+  }
 
-nav{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row;
-}
+  nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+  }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  padding: 5px 10px;
-}
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 5px 10px;
+  }
 
-nav li {
-  height: 50px;
-}
+  nav li {
+    height: 50px;
+  }
 
-nav a {
-  height: 100%;
-  padding: 0 20px;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--dark);
-  font-family: "Alef", sans-serif;
-  font-size: 1.1rem;
-}
+  nav a {
+    height: 100%;
+    padding: 0 20px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--dark);
+    font-family: "Alef", sans-serif;
+    font-size: 1.1rem;
+  }
 
-.hideOnMobile nav a {
+  .hideOnMobile nav a {
+    color: var(--red);
+  }
+
+  /*Hover effect på navbar*/
+  nav a:hover {
+    color:var(--red);
+  }
+
+  /* Nav bar faste farver på givne sider */
+  .behindnav a, .contactnav  a{
   color: var(--red);
-}
+  }
 
-.kortcom a{
-  text-decoration: none;
-  color: var(--dark);
-}
+  /*burgermenu indhold*/
+  .sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    background-color: var(--gul);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 170px;
+    gap: 20px;
+    z-index: 200;
+  }
 
-/*nav */ 
-/*Hover effect på navbar*/
-nav a:hover {
-  color:var(--red);
-}
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
 
-nav a:active{
-  color: var(--red);
-}
+  .sidebar li {
+    width: 100%;
+  }
 
-/* Nav bar faste farver på givne sider */
-.behindnav a, .contactnav  a{
- color: var(--red);
-}
+  .sidebar a {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    text-decoration: none;
+    color: var(--dark);
+  }
 
-/*burgermenu indhold*/
-.sidebar {
-  position: fixed;
-  top: 0;
-  right: 0;
-  height: 100vh;
-  width: 250px;
-  background-color: var(--gul);
-  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
-  list-style: none;
-  display: none;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  padding-top: 170px;
-  gap: 20px;
-  z-index: 200;
-}
+  .menu-button {
+    display: none;
+  }
 
-.sidebar ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  width: 100%;
-}
+  .krys {
+    position: absolute;
+    left: 140px;
+    top: 40px;
+  }
 
-.sidebar li {
-  width: 100%;
-}
+  .kigop {
+    position: absolute;
+    bottom: 0;
+    width: 200px;
+    right: 10px;
+    margin-bottom: 40px;
+  }
 
-.sidebar a {
-  width: 100%;
-  text-align: center;
-  padding: 10px 0;
-  text-decoration: none;
-  color: var(--dark);
-}
+  .bue1{
+    position: absolute;
+    top: 135px;
 
-.menu-button {
-  display: none;
-}
+  }
 
-.krys {
-  position: absolute;
-  left: 140px;
-  top: 40px;
-}
-
-.kigop {
-  position: absolute;
-  bottom: 0;
-  width: 200px;
-  right: 10px;
-  margin-bottom: 40px;
-}
-
-.bue1{
-  position: absolute;
-  top: 135px;
-
-}
-
-.bue2{
-  position: absolute;
-  top: 270px;
-}
+  .bue2{
+    position: absolute;
+    top: 270px;
+  }
 
 /*Menukort - slide out*/
   /* Menukort */
@@ -238,7 +233,6 @@ nav a:active{
     top: 0;
     z-index: 1000;
   }
-
 
   #morewordsmenu {
     margin-block-start: 0;
@@ -275,13 +269,14 @@ nav a:active{
     font-family: "alef", cursive;
   }
 
-  /* kaffe te */
+  /* vegetar icon */
   .bladiconrow{
     display: flex;
     flex-direction: row;
     align-items: center;
   }
 
+  /* Billeder på menukort*/
   #menukortsandwichimg, #menukortkaffeimg {
     width: 70%;
     grid-column-start: 1;
@@ -289,7 +284,7 @@ nav a:active{
     justify-self: center;
   }
 
-
+  /*Bestil knap på menukort*/
   #bestilknapmenu{
     width: 40%;
     padding-top: 2%;
@@ -304,6 +299,7 @@ nav a:active{
     cursor: pointer;
     transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
   } 
+
 
   #bestilknapmenu:hover {
     background-color: var(--contrastbackground); 
@@ -625,13 +621,14 @@ nav a:active{
     .firexdingse {
       margin-top: -10%;
       margin-left: 30%;
-      font-size: 2rem;
     }
 
     .firexdingse h3 {
       opacity: 0;
       transform: translateY(20px); /* Startposition under deres endelige destination */
       transition: opacity 0.2s ease-out, transform 0.2s ease-out;
+      font-size: 3rem;
+
     }
 
     .firexdingse h3.visible {
@@ -708,14 +705,6 @@ nav a:active{
       padding-bottom: 2px; 
     }
 
-    #kursivtekst {
-      margin-top: 5%;
-      margin-left: 5%;
-      margin-right: 5%;
-      text-align: center;
-      font-weight: 200;
-    }
-
   /* billeder på midtersection */
     .udefraillustration {
       width: 80%;
@@ -735,6 +724,7 @@ nav a:active{
 
     .instagram {
       margin-top: 20%;
+      gap: 5%;
     }
 
     .foelgtekst {
@@ -742,11 +732,11 @@ nav a:active{
       align-items: center;
       display: flex;
       flex-direction: column;
-      margin-top: 10%;
+      margin: 8% 10%;
     }
-
-    .midtersection h2 {
-    padding: 2%;
+    
+    .foelgtekst h3, .foelgtekst h2, .foelgtekst a{
+    margin-bottom: 5%;
     }
 
     .foelgbilleder {
@@ -766,7 +756,6 @@ nav a:active{
     text-align: center;
     flex-direction: column;
     padding: 4% 20%;
-    margin: 2% 3%;
     }
 
     .instagram-media {
@@ -777,18 +766,26 @@ nav a:active{
     }
 
 
-    .foelgknap {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    }
-
     .desktopbilleder {
       display: none;
     }
 
     .desktopbilleder img {
       display: none;
+    }
+
+    /*Instgram følg os knap*/
+    .foelgknap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 5%;
+      margin-top: 5%;
+      border-radius: 5px;
+    }
+
+    .foelgknap .fold_btn {
+      margin-right: 0;
     }
 
 
@@ -873,6 +870,7 @@ nav a:active{
       text-align: center;
       padding: 5%;
       color: #c7352a;
+      font-size: 2.5em;
     }
 
      .ringx4 h3 {
@@ -908,10 +906,6 @@ nav a:active{
     .ekstra-tekst {
       margin-top: 5%;
     }
-
-    .foelgknap1 {
-      margin: 5% 5%;
-      }
 
 
 /**************************************************/
@@ -1011,6 +1005,7 @@ nav a:active{
       opacity: 0;
       transform: translateY(20px); /* Startposition under deres endelige destination */
       animation: pop 0.2s forwards;
+      font-size: 2.5em;
     }
 
     .bagom-ordx4 h3:nth-child(1) {
@@ -1038,10 +1033,10 @@ nav a:active{
 
   /* tekst til bagom */
     .tekst_container_bagom {
-      margin-top: 10%;
+      margin-top: 5%;
     }
 
-    .broedtekst {
+    .broedtekst-desktop {
       display: flex;
       justify-content: center;
       text-align: justify;
@@ -1050,6 +1045,25 @@ nav a:active{
       margin-right: 10%;
       margin-bottom: 1%;
       line-height: 2rem;
+    }
+
+    .broedtekst-mobil {
+      display: none;
+    }
+    .foer-læs-mere-mobil {
+      display: none;
+    }
+
+    @media (max-width: 800px) {
+      .broedtekst-mobil, .foer-læs-mere-mobil {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .broedtekst-desktop {
+        display: none;
+      }
     }
 
     #mere {
@@ -1114,6 +1128,11 @@ nav a:active{
       line-height: 2rem;
     }
 
+    .tekst_foldud_bagom h1{
+      text-align: center;
+      padding-top: 4%;
+    }
+
 
 
     .mobil_broed {
@@ -1122,7 +1141,6 @@ nav a:active{
 
     .img {
       background-color: var(--background);
-      width: 35%;
       padding: 20px;
       box-sizing: border-box;
     }
@@ -1140,7 +1158,6 @@ nav a:active{
       margin-left: 0;
     }
 
-
     .fold_btn {
       padding: 5px 10px;
       margin: 10px 0;
@@ -1151,6 +1168,7 @@ nav a:active{
       cursor: pointer;
       width: 8em;
       margin-right: 53%;
+      border-radius: 5px;
     }
 
     .fold_btn_dingse {
@@ -1163,6 +1181,53 @@ nav a:active{
       cursor: pointer;
       width: 8em;
       margin-left: 50%;
+      border-radius: 5px;
+    }
+
+    /* Ekstra dingse foto til mobil vs desktop styling */
+
+    @media (min-width: 800px) {
+    .dingsevandmobil-foto {
+      display: none;
+    }
+  }
+
+    /* Styler til mobil - gjort omvendt pga design til desktop flere funktioner */
+
+    @media (max-width: 800px) {
+
+      /* Styling af læs mere centreret */
+
+      .fold_btn {
+        padding: 5px 10px;
+        margin: 10px 0;
+        background-color: var(--contrastbackground);
+        color: var(--dark);
+        font-family: "Alef", sans-serif;
+        text-align: center;
+        cursor: pointer;
+        width: 8em;
+        border-radius: 5px;
+      }
+
+      .fold_btn_dingse {
+        padding: 5px 10px;
+        margin: 10px 0;
+        background-color: var(--contrastbackground);
+        color: var(--dark);
+        font-family: "Alef", sans-serif;
+        text-align: center;
+        cursor: pointer;
+        width: 8em;
+        border-radius: 5px;
+      }
+
+      /* Fjerner dingsevand billede på mobil og indsætter det under teksten */
+
+      .read-more4 {
+        display: none;
+      }
+
     }
 
     .fold_in_btn {
@@ -1261,7 +1326,7 @@ nav a:active{
       margin-top: -2%;
       }
 
-      #laesmere_hover:hover {
+      .laesmere_hover:hover {
         background-color: var(--gul); /* Change background color on hover */
         box-shadow: 0 4px 15px #c7352a(0, 0, 0, 0.2); /* Add box shadow on hover */
         transform: scale(1.05); /* Slightly enlarge the button on hover */
@@ -1273,14 +1338,20 @@ nav a:active{
 
   .dingsevand-figur-og-tekst {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 20% 80%;
 
   }
 
   #dingsevand_figur {
-    width: 35vh;
-    padding: 2%;
+    justify-self: center;
+    align-self: center;
+    width: 50vh;
+    padding: 5%;
   } 
+
+  #dingsevandtekst5 {
+    text-align: center;
+  }
 
   .dingsedrik_titel {
     display: flex;
@@ -1292,7 +1363,7 @@ nav a:active{
 
       #h2_hjemmelavet {
         padding-top: 5%;
-        padding-bottom: 5%;
+        padding-bottom: 2%;
         text-align: center;
       }
 
@@ -1527,6 +1598,11 @@ footer {
   left: 0;
 }
 
+
+.kortcom a{
+  text-decoration: none;
+  color: var(--dark);
+}
 .info-container1,
 .info-container2 {
   list-style-type: none;
@@ -1657,11 +1733,12 @@ iframe{
       .alefred{
         color: var(--red);
         font-family: "Alef", sans-serif;
+        font-size: 2.5em;
       }
 
       .anniestor {
         color: var(--dark);
-        font-size: 2.3em;
+        font-size: 2em;
         font-family: "Annie Use Your Telescope", cursive;
       }
     }
@@ -1761,6 +1838,12 @@ iframe{
   /******STYLER MEDIA OVER 800PX******/ 
   @media(min-width: 800px) {
     
+    .annielille{
+      color: var(--dark);
+      font-size: 2.4em;
+      font-family: "Annie Use Your Telescope", cursive;
+      }
+
     .main-popup {
       max-width: 50%; 
       width: 100%; 
@@ -1837,6 +1920,10 @@ iframe{
       margin-top: 25%;
     }
 
+    .firexdingse h3{
+      font-size: 5em;
+    }
+
     .baggrunddingse {
       background-color: #c7352a;
     }
@@ -1901,8 +1988,8 @@ iframe{
       justify-content: center;
       align-items: center;
       text-align: center;
-      font-weight: 300;
-      font-size: 1.5em;
+      font-size: 2em;
+      margin-bottom: 0;
     }
 
     #responsivetekst {
@@ -1945,13 +2032,6 @@ iframe{
     .instagram {
       margin-top: 10%;
       
-    }
-
-    .foelgtekst {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
     }
 
     .billedeserie1{
@@ -2001,17 +2081,29 @@ iframe{
 
   .foelgtekst {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     justify-content: space-between;
     margin-left: 10%;
     margin-right: 10%;
+    margin-top: 0;
+    margin-bottom: 0;
     }
 
     .foelgknap {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-top: -4%;
+      margin-bottom: 5%;
     }
+
+    .foelgknap .fold_btn{
+      margin-right: 0;
+      font-size: 1.5em;
+    }
+
+    .fold_btn, .fold_btn_dingse{
+      font-size: 1.5em;
+    }
+    
 
   /******** kontakt os *******/
     #openhours {
@@ -2074,7 +2166,7 @@ iframe{
     text-align: center;
     padding: 0%;
     margin-left: 30%;
-    font-size: 2,5em;
+    font-size: 5em;
   }
 
     .adresse-kontakt {
@@ -2100,11 +2192,6 @@ iframe{
 
   /***** Bagom *****/
   /* læs mere knap */
-
-
-  .tekst_container_bagom {
-    margin-top: -3%;
-  }
   
   #indhold {
     display: block !important;
@@ -2180,7 +2267,7 @@ iframe{
   .read-more {
     display: flex;
     flex-direction: column; 
-    gap: 5px; 
+    gap: 20px; 
   }
 
   .text {
@@ -2204,25 +2291,16 @@ iframe{
   }
 
   .read-more-content img {
-    max-width: 50%; 
+    width: 20vh;
     height: auto;
-  }
-
-  /* billeder bagomsiden */
-  .img {
-    width: 80%;
-    margin-top: -10%;
+    align-items: center;
+    justify-content: center;
   }
 
   /* knapper foldud siden */
   .fold_reply {
    margin-left: 2%;
    margin-top: 2%;
-  }
-  
-  .fold_btn1 {
-    margin-left: -3%;
-    margin-top: -1%;
   }
 
   .reply {
@@ -2428,20 +2506,6 @@ iframe{
       margin-top: 2%;
     }
 
-    #bestilknapforside{
-      width: 200px;
-      font-size: 2em;
-
-    }
-
-    .bestilknapforside2{
-      width: 100px;
-    }
-
-    #bestilknapmenu{
-      width: 150px;
-    }
-
     /* MENUKORT HTML */
     /* Opdeling af side */
     .leftside{
@@ -2452,8 +2516,6 @@ iframe{
     .rightside{
       width: 50%;
     }
-
-
   }
 
   /******STYLER MEDIA OVER 1500PX******/ 
@@ -2472,6 +2534,7 @@ iframe{
 
     .billedeserie1{
       gap: 50px;
+      padding-bottom: 0;
     }
 
     .kursivtekst{
