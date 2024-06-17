@@ -1,5 +1,4 @@
 'use strict';
-
 function initMap() {
     // Dingses place ID
     let placeId = 'ChIJqzgsLqM_TEYR4wcxdBG0Iyw';
@@ -29,34 +28,38 @@ function updateOpeningTimes(openingHours) {
         return;
     }
 
-    let timesList = document.getElementById('times-list');
-    timesList.innerHTML = '';
-
-    openingHours.weekday_text.forEach(function (day) {
-        var listItem = document.createElement('li');
-        listItem.textContent = day;
-        timesList.appendChild(listItem);
-    });
-
     // Get today's day index (0 is Sunday, 1 is Monday, etc.)
-    let today = new Date().getDay(); // Get JavaScript day index
-    let googleApiDayIndex = (today === 0) ? 6 : today - 1; // Adjust for Google Places API
+    let today = new Date().getDay();
+    let googleApiDayIndex = (today === 0) ? 6 : today + 1;
 
+    // Update today's opening hours
     let todayOpeningTime = openingHours.weekday_text[googleApiDayIndex];
     let openingTimesElement = document.getElementById('today-opening-time');
-
-    // tjekker om der er lukket
-    if (todayOpeningTime.toLowerCase().includes('lukket') || todayOpeningTime.toLowerCase().includes('closed')) {
-        openingTimesElement.textContent = 'Vi har lukket i dag.';
+    if (openingTimesElement) {
+        if (todayOpeningTime.toLowerCase().includes('lukket') || todayOpeningTime.toLowerCase().includes('closed')) {
+            openingTimesElement.textContent = 'Vi har lukket i dag.';
+        } else {
+            let openingTime = todayOpeningTime.split(': ')[1]; // Assuming format is "Monday: 9:00 AM – 5:00 PM"
+            openingTimesElement.textContent = `Vi har åben i dag fra ${openingTime}.`;
+        }
     } else {
-        // henter åbningstiden
-        let openingTime = todayOpeningTime.split(': ')[1]; // Assuming format is "Monday: 9:00 AM – 5:00 PM"
-        openingTimesElement.textContent = `Vi har åben i dag fra ${openingTime}.`;
+        console.error('today-opening-time element not found.');
     }
 
+    // Update the full week's opening hours if the element exists
+    let timesList = document.getElementById('times-list');
+    if (timesList) {
+        timesList.innerHTML = '';
+        openingHours.weekday_text.forEach(function(day) {
+            var listItem = document.createElement('li');
+            listItem.textContent = day;
+            timesList.appendChild(listItem);
+        });
+    }
 }
 
-
+// Initialize the map when the DOM is fully loaded
+document.addEventListener('DOMContentLoaded', initMap);
 // Initialize the map and fetch the opening times once the window loads
 window.onload = initMap;
 
