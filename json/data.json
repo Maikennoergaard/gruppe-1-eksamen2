@@ -1,5 +1,4 @@
-{
-  "sandwiches": [
+ { "sandwiches": [
     {
       "name": "SERRANO",
       "description": "fra 'Monte Nevado' (23 mdr.), basilikum, mozarella, pinjekerner & rucola",
@@ -31,6 +30,7 @@
       "vegetarian": true
     }
   ],
+
   "sodt": [
     {
       "name": "PETIT FOUR // 15 KR",
@@ -41,6 +41,7 @@
       "description": "espresso, marsala & cognac"
     }
   ],
+
   "drikkevarer": [
     {
       "name": "VAND // 25 KR",
@@ -51,6 +52,7 @@
       "description": "Vi blander vores egen Dingsevand, lavet af friskpresset juice og danskvand",
       "taste": "Smag af jordbær, citron, lime & pinkgrape"
     },
+    
     {
       "name": "KAFFE",
       "items": [

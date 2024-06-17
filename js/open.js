@@ -1,16 +1,16 @@
 'use strict';
 
 function initMap() {
-    // Define the place ID of the location you want to get opening times for
+    // Dingses place ID
     var placeId = 'ChIJqzgsLqM_TEYR4wcxdBG0Iyw';
 
-    // Create a map to initialize the PlacesService
+    // Opret et kort for at initialisere PlacesService
     var map = new google.maps.Map(document.createElement('div'));
 
-    // Create the PlacesService instance
+    // Opret instansen af PlacesService
     var service = new google.maps.places.PlacesService(map);
 
-    // Request details for the specified place
+    // Anmod om detaljer for det angivne sted
     service.getDetails({
         placeId: placeId,
         fields: ['opening_hours']
@@ -47,10 +47,13 @@ function updateOpeningTimes(openingHours) {
 
     // Check if the place is closed today
     if (todayOpeningTime.toLowerCase().includes('closed')) {
-        openingTimesElement.textContent = 'We are closed today.';
+    openingTimesElement.textContent = 'Vi har lukket i dag.';
     } else {
-        openingTimesElement.textContent = `Today's opening times: ${todayOpeningTime}`;
+    // Extract just the opening time from todayOpeningTime
+    let openingTime = todayOpeningTime.split(': ')[1]; // Assuming format is "Monday: 9:00 AM – 5:00 PM"
+    openingTimesElement.textContent = `Vi har åben i dag fra ${openingTime}.`;
     }
+
 }
 
 

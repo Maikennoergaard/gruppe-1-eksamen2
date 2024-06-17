@@ -5,13 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="dingse">
+    <meta property="og:title" content="Dingse Friskbagt">
     <meta property="og:site_name" content="dingse">
     <meta name="description" content="På bag om Dingse kan du finde mere information om Olivia og Søren der har åbnet Dingse. Du kan lære om råvarer, Dingeses egen vand de selv laver og meget mere. ">
     <meta name="keywords" content="surdej, frisk bagt brød, kvalitets frokost, hurtig frokost, Frokost i Aarhus">
     <meta name="author" content="Dingse Frisk Bagt i Aarhus C">
     <meta name="geo.placename" content="Aarhus">
-    <meta property="og:url" content="https://dingse.karolinebauer.dk/undersider/bagom.html">
+    <!--Billed til url-->
+        <meta property="og:image" content="https://dingse.annavinge.dk/img/farver/galleri-desktop.webp" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+    <meta property="og:url" content="https://dingse.annavinge.dk/undersider/bagom.html">
     <meta property="og:locale" content="da_dk">
     <meta name="format-detection" content="telephone=no">
     <!-- SEO slut -->
@@ -31,14 +35,13 @@
 
 <body>
     <header>
-
         <!-- Navbar -->
         <nav>
             <a href="/index.html" class="logo"><img src="/img/icon/logo.webp" alt="Dingse logo" width="100" height="50"></a>
             <ul>
-                <li class="hideOnMobile"><a href="/undersider/menukort.html" id="menu-button">MENU</a></li>
+                <li class="hideOnMobile "><a href="/undersider/menukort.html" id="menu-button" >MENU</a></li>
                 <li class="hideOnMobile"><a href="/undersider/kontaktos.html">KONTAKT</a></li>
-                <li class="hideOnMobile"><a href="/undersider/bagom.html">BAG OM DINGSE</a></li>
+                <li class="hideOnMobile behindnav"><a href="/undersider/bagom.html">BAG OM DINGSE</a></li>
                 <li class="menu-button" onclick="showSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="50" viewBox="0 96 960 960" width="50"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z" /></svg></a></li>
             </ul>
         </nav>
@@ -74,7 +77,7 @@
     
    
     <div class="tekst_container_bagom">
-        <h1 class="anniestor" id="kursivtekst">"Vi serverer restaurantkvalitet - i en sandwich"</h1>
+        <h1 class="anniestor">"Vi serverer restaurantkvalitet - i en sandwich"</h1>
         <div id="indhold" class="skjult">
             <p class="broedtekst">
                 Vi åbnede Dingse i oktober 2023 på Badstuegade i Aarhus C. Vi åbnede med målet om at servere lækre sandwich lavet af råvarer af høj kvalitet.
@@ -85,7 +88,7 @@
             </p>
             <div id="lukKnap" class="knap">Luk</div>
         </div>
-        <div id="laesMereKnap" class="knap">Læs mere</div>
+        <div id="laesMereKnap" class="knap laesmere_hover">Læs mere</div>
     </div>
 
     <br>
@@ -117,32 +120,30 @@
                     </div>
                 </div>
                 <div class="fold_reply" data-target=".reply1">
-                    <div class="fold_btn" id="laesmere_hover">Læs mere</div>
+                    <div class="fold_btn laesmere_hover" >Læs mere</div>
                 </div>
             </section>
             <!-- Content til undersiden - surdej-->
             <div class="reply reply1">
-                <img class="surdej5" src="../img/farver/broed-paa-stak.png" alt="Surdejs brød">
-               
                 <div class="tekst_foldud_bagom">
-                <h1 class="alefred" id="h1_foldud"> Vi bager friskt brød hver dag! </h1>
-                <p id="p_foldud"> Søren er uddannet i det franske køkken, men har også en kærlighed for bagværk og har altid bagt meget. Vi har valgt at fokusere på surdej på grund af den gode smag og sprøde skorpe.</p>
-                <h2 class="anniestor" id="h2_foldud"> Se vores proces bag surdejen her: </h2>
+                    <img class="surdej5" src="../img/farver/broed-paa-stak.png" alt="Surdejs brød">
+                    <h1 class="anniestor"> "Vi bager friskt brød hver dag!"</h1>
+                    <p id="p_foldud"> Søren er uddannet i det franske køkken, men har også en kærlighed for bagværk og har altid bagt meget. Vi har valgt at fokusere på surdej på grund af den gode smag og sprøde skorpe. <br> <br> Se vores proces bag surdejen her:</p>
                 </div>
                 
-                <h3 class="anniestor" id="h3_foldud">Trin 1</h3>
+                <h3 class="alefdark" id="h3_foldud">Trin 1</h3>
                 <img src="../img/familystyle/inforgrafik-ny2.webp" alt="Fermentering af surdej" id="fermentering_af_surdej">
                 <p class="p_foldud_info" >Vi ælter dejen ved at strække og folde den, sådan vi får lufttige brød.</p>
-                <h3 class="anniestor" id="h3_foldud_siden">Trin 2</h3>
+                <h3 class="alefdark" id="h3_foldud_siden">Trin 2</h3>
                 <img src="../img/familystyle/infografik-ny1.webp" alt="Stræk og fold surdej" id="straek_og_fold_surdej">
                 <p class="p_foldud_info_side">Surdejen fermenterer op til 24 timer, dette er for at sikre god smag. </p>
-                <h3 class="anniestor" id="h3_foldud">Trin 3</h3>
+                <h3 class="alefdark" id="h3_foldud">Trin 3</h3>
                 <img src="../img/familystyle/infografik-1.webp" alt="Bages ved høj varme" id="bages_ved_hoej_varme">
                 <p class="p_foldud_info"> Vi vender brødet direkte ud på bordet efter endt fermentering</p>
-                <h3 class="anniestor" id="h3_foldud_siden">Trin 4</h3>
+                <h3 class="alefdark" id="h3_foldud_siden">Trin 4</h3>
                 <img src="../img/familystyle/infografik-2.webp" alt="Stræk og fold surdej" id="straek_og_fold_surdej">
                 <p class="p_foldud_info_side"> Vi former brødet ved at skære det i firkanter og forme det nænsomt, sådan det beholder sine luftbobler</p>
-                <h3 class="anniestor" id="h3_foldud">Trin 5</h3>
+                <h3 class="alefdark" id="h3_foldud">Trin 5</h3>
                 <img src="../img/familystyle/infografik-3.webp" alt="Fermentering af surdej" id="fermentering_af_surdej">
                 <p class="p_foldud_info" >Til sidst bager vi brødet i ovnen ved høj intens varme.</p>
 
@@ -165,7 +166,7 @@
                     </div>
                 </div>
                 <div class="fold_reply" data-target=".reply2">
-                    <div class="fold_btn" id="laesmere_hover">Læs mere</div>
+                    <div class="fold_btn_dingse laesmere_hover">Læs mere</div>
                 </div>
             </section>
 
@@ -173,8 +174,10 @@
             <div class="reply reply2">
                 <div class="dingsedrik_titel">
                     <h2 class="alefred" id="h2_hjemmelavet">HJEMMELAVET DINGSEVAND</h2>
+                    <div class="dingsevand-figur-og-tekst">
                     <p class="alefdark">Lavet af friskpresset juice og danskvand.</p>
-                    <img src="/img/dingsedamer/drikker.png" alt="Dingsevand figur" id="dingsevand_figur">
+                    <img src="/img/dingsedamer/drikker3.webp" alt="Dingsevand figur" id="dingsevand_figur">
+                    </div>
                 </div>
 
                 <div class="dingsevand-fotocontainer">
@@ -227,13 +230,13 @@
                     </div>
                 </div>
                 <div class="fold_reply" data-target=".reply3">
-                    <div class="fold_btn" id="laesmere_hover">Læs mere</div>
+                    <div class="fold_btn laesmere_hover">Læs mere</div>
                 </div>
             </section>
             <!-- Content til undersiden råvare-->
             <div class="reply reply3">
                 <!-- video råvare -->
-            <h2 class="alefred" id="h2_foldud_raevare">VI HAR UDVALGTE RÅVARER AF HØJ KVALITET.</h2>
+            <h2 class="alefred" id="h2_foldud_raevare">RÅVARER AF HØJ KVALITET</h2>
 
             <div class="bagom-raevare">
                 <video class="raevare-video" autoplay loop muted playsinline>
@@ -256,7 +259,7 @@
           <div class="oliven_container">
           <div class="tekstcontainer_olivenolie">
           <h3 class="anniestor" id="h3_foldud_raevare">“Mere olivenolie - mindre friture”</h3>
-          <p>Dette er et signatur udsagn fra Dingses kok; Søren</p>
+          <p>Dette er et udsagn fra Dingses kok; Søren</p>
           </div>
           <img src="/img/familystyle/oliven.webp" alt="Olivenolie og smør" class="olivenolie_og_smoer">
           </div>            
@@ -280,9 +283,10 @@
             <img src="/img/farver/galleri-mobile.webp" alt="Galleri til mobil" class="fotomobil">
             <img src="/img/farver/galleri-desktop.webp" alt="Galleri til desktop" class="fotodesktop">
         </div>
-        <div class="insta-container">
-        <h4 class="annielille">“Del dine bedste dingse oplevelser. Vi elsker, at følge med i jeres bedste nye madoplevelser."</h4>
-        <h4 class="annielille"> #dingsefriskbagt<img src="/img/icon/instagram.webp" alt="instaicon" class="instaicon"></h4>
+        <div class="insta-container iconer iconergalleri">
+        <h4 class="anniestor">“Del dine bedste dingse oplevelser. Vi elsker, at følge med i jeres bedste nye madoplevelser."</h4>
+        <a href="https://www.instagram.com/dingsefriskbagt/"><img src="/img/icon/instagram.webp" alt="instagram icon" class="icongalleri">@Dingsefriskbagt </a>
+        </h4>
         </div>
     </section>
 
@@ -455,10 +459,12 @@
         <ul class="mininav">
             <li class="menukortmininav"><a href="/undersider/menukort.html" id="menu-button-footer">MENU</a></li>
             <li class="kontaktosmininav"><a href="/undersider/kontaktos.html">KONTAKT</a></li>
-            <li class="bagommininav"><a href="/undersider/bagom.html">BAG OM DINGSE</a></li>
+            <li class="bagommininav behindnav"><a href="/undersider/bagom.html">BAG OM DINGSE</a></li>
         </ul>
     </footer>
     
     <script src="/js/script.js"></script>
+    <script src="/js/menu.js"></script>
     <script src="/js/readmore.js"></script>
+    <script src="/js/scroll.js"></script>
 </body>
