@@ -793,7 +793,7 @@ body{
 /******************* Kontakt os *******************/ 
 /* Styling af font med ID for at størrelserne passer */
 
-  .openhours{
+  .openhours h2{
     font-size: 2em;
     display: flex;
     text-align: center;
@@ -2106,7 +2106,7 @@ iframe{
     
 
   /******** kontakt os *******/
-    #openhours {
+    #openhours{
       font-size: 3rem;
     }
 
