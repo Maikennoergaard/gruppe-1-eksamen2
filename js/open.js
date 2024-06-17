@@ -2,13 +2,13 @@
 
 function initMap() {
     // Dingses place ID
-    var placeId = 'ChIJqzgsLqM_TEYR4wcxdBG0Iyw';
+    let placeId = 'ChIJqzgsLqM_TEYR4wcxdBG0Iyw';
 
     // Opret et kort for at initialisere PlacesService
-    var map = new google.maps.Map(document.createElement('div'));
+    let map = new google.maps.Map(document.createElement('div'));
 
     // Opret instansen af PlacesService
-    var service = new google.maps.places.PlacesService(map);
+    let service = new google.maps.places.PlacesService(map);
 
     // Anmod om detaljer for det angivne sted
     service.getDetails({
