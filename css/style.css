@@ -1036,7 +1036,7 @@ body{
       margin-top: 5%;
     }
 
-    .broedtekst {
+    .broedtekst-desktop {
       display: flex;
       justify-content: center;
       text-align: justify;
@@ -1045,6 +1045,25 @@ body{
       margin-right: 10%;
       margin-bottom: 1%;
       line-height: 2rem;
+    }
+
+    .broedtekst-mobil {
+      display: none;
+    }
+    .foer-læs-mere-mobil {
+      display: none;
+    }
+
+    @media (max-width: 800px) {
+      .broedtekst-mobil, .foer-læs-mere-mobil {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .broedtekst-desktop {
+        display: none;
+      }
     }
 
     #mere {
@@ -1109,6 +1128,11 @@ body{
       line-height: 2rem;
     }
 
+    .tekst_foldud_bagom h1{
+      text-align: center;
+      padding-top: 4%;
+    }
+
 
 
     .mobil_broed {
@@ -1117,7 +1141,6 @@ body{
 
     .img {
       background-color: var(--background);
-      width: 35%;
       padding: 20px;
       box-sizing: border-box;
     }
@@ -1159,6 +1182,52 @@ body{
       width: 8em;
       margin-left: 50%;
       border-radius: 5px;
+    }
+
+    /* Ekstra dingse foto til mobil vs desktop styling */
+
+    @media (min-width: 800px) {
+    .dingsevandmobil-foto {
+      display: none;
+    }
+  }
+
+    /* Styler til mobil - gjort omvendt pga design til desktop flere funktioner */
+
+    @media (max-width: 800px) {
+
+      /* Styling af læs mere centreret */
+
+      .fold_btn {
+        padding: 5px 10px;
+        margin: 10px 0;
+        background-color: var(--contrastbackground);
+        color: var(--dark);
+        font-family: "Alef", sans-serif;
+        text-align: center;
+        cursor: pointer;
+        width: 8em;
+        border-radius: 5px;
+      }
+
+      .fold_btn_dingse {
+        padding: 5px 10px;
+        margin: 10px 0;
+        background-color: var(--contrastbackground);
+        color: var(--dark);
+        font-family: "Alef", sans-serif;
+        text-align: center;
+        cursor: pointer;
+        width: 8em;
+        border-radius: 5px;
+      }
+
+      /* Fjerner dingsevand billede på mobil og indsætter det under teksten */
+
+      .read-more4 {
+        display: none;
+      }
+
     }
 
     .fold_in_btn {
@@ -1269,14 +1338,20 @@ body{
 
   .dingsevand-figur-og-tekst {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 20% 80%;
 
   }
 
   #dingsevand_figur {
-    width: 35vh;
-    padding: 2%;
+    justify-self: center;
+    align-self: center;
+    width: 50vh;
+    padding: 5%;
   } 
+
+  #dingsevandtekst5 {
+    text-align: center;
+  }
 
   .dingsedrik_titel {
     display: flex;
@@ -1288,7 +1363,7 @@ body{
 
       #h2_hjemmelavet {
         padding-top: 5%;
-        padding-bottom: 5%;
+        padding-bottom: 2%;
         text-align: center;
       }
 
@@ -2192,7 +2267,7 @@ iframe{
   .read-more {
     display: flex;
     flex-direction: column; 
-    gap: 5px; 
+    gap: 20px; 
   }
 
   .text {
@@ -2216,14 +2291,10 @@ iframe{
   }
 
   .read-more-content img {
-    max-width: 50%; 
+    width: 20vh;
     height: auto;
-  }
-
-  /* billeder bagomsiden */
-  .img {
-    width: 80%;
-    margin-top: -10%;
+    align-items: center;
+    justify-content: center;
   }
 
   /* knapper foldud siden */
