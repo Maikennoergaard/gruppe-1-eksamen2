@@ -45,13 +45,13 @@ function updateOpeningTimes(openingHours) {
     let todayOpeningTime = openingHours.weekday_text[googleApiDayIndex];
     let openingTimesElement = document.getElementById('today-opening-time');
 
-    // Check if the place is closed today
-    if (todayOpeningTime.toLowerCase().includes('closed')) {
-    openingTimesElement.textContent = 'Vi har lukket i dag.';
+    // tjekker om der er lukket
+    if (todayOpeningTime.toLowerCase().includes('lukket') || todayOpeningTime.toLowerCase().includes('closed')) {
+        openingTimesElement.textContent = 'Vi har lukket i dag.';
     } else {
-    // Extract just the opening time from todayOpeningTime
-    let openingTime = todayOpeningTime.split(': ')[1]; // Assuming format is "Monday: 9:00 AM – 5:00 PM"
-    openingTimesElement.textContent = `Vi har åben i dag fra ${openingTime}.`;
+        // henter åbningstiden
+        let openingTime = todayOpeningTime.split(': ')[1]; // Assuming format is "Monday: 9:00 AM – 5:00 PM"
+        openingTimesElement.textContent = `Vi har åben i dag fra ${openingTime}.`;
     }
 
 }
