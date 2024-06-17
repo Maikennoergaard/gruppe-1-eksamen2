@@ -30,7 +30,7 @@ function updateOpeningTimes(openingHours) {
 
     // Get today's day index (0 is Sunday, 1 is Monday, etc.)
     let today = new Date().getDay();
-    let googleApiDayIndex = (today === 0) ? 6 : today + 1;
+    let googleApiDayIndex = (today === 0) ? 6 : today - 1;
 
     // Update today's opening hours
     let todayOpeningTime = openingHours.weekday_text[googleApiDayIndex];
