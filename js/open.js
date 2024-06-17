@@ -1,16 +1,16 @@
 'use strict';
 
 function initMap() {
-    // Define the place ID of the location you want to get opening times for
+    // Dingses place ID
     var placeId = 'ChIJqzgsLqM_TEYR4wcxdBG0Iyw';
 
-    // Create a map to initialize the PlacesService
+    // Opret et kort for at initialisere PlacesService
     var map = new google.maps.Map(document.createElement('div'));
 
-    // Create the PlacesService instance
+    // Opret instansen af PlacesService
     var service = new google.maps.places.PlacesService(map);
 
-    // Request details for the specified place
+    // Anmod om detaljer for det angivne sted
     service.getDetails({
         placeId: placeId,
         fields: ['opening_hours']
