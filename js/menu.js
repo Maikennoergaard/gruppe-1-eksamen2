@@ -7,8 +7,19 @@ document.addEventListener("DOMContentLoaded", function() {
             const sodtList = document.getElementById('sodtul');
             const drikkeList = document.getElementById('drikkeul');
 
-            // Clear existing list items to avoid duplication
-            sandwichList.innerHTML = '';
+            // Append the static "Alle sandwich 89kr" text first
+            const staticItem = document.createElement('li');
+            const staticText = document.createElement('h4');
+            staticText.className = 'alefred';
+            staticText.id = 'prismenu';
+            staticText.textContent = 'Alle sandwich 89kr';
+            staticItem.appendChild(staticText);
+            sandwichList.appendChild(staticItem);
+
+            // Clear existing list items (except the static text) to avoid duplication
+            while (sandwichList.children.length > 1) {
+                sandwichList.removeChild(sandwichList.lastChild);
+            }
             sodtList.innerHTML = '';
             drikkeList.innerHTML = '';
 
@@ -113,6 +124,7 @@ document.addEventListener("DOMContentLoaded", function() {
         return listItem;
     }
 });
+
 
 
 
