@@ -63,6 +63,7 @@ body{
   .annielille{
   color: var(--dark);
   font-size: 1.4em;
+  font-weight: 200;
   font-family: "Annie Use Your Telescope", cursive;
   }
   
