@@ -779,8 +779,7 @@ body{
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-bottom: 5%;
-      margin-top: 5%;
+      margin-bottom: 10%;
       border-radius: 5px;
     }
 
@@ -794,7 +793,7 @@ body{
 /* Styling af font med ID for at størrelserne passer */
 
   .openhours h2{
-    font-size: 2em;
+    font-size: 2.5em;
     display: flex;
     text-align: center;
     justify-content: center;
@@ -839,18 +838,19 @@ body{
 
   /* Tilføjet padding for at give luft mellem teksten på siden. Tilføjet i % for at være responsiv */
   .kontakt-sektion {
-    padding: 5%;
+    margin-top: 10%;
   }
 
   .adresse-kontakt {
-    padding: 5%;
+    margin-top: 10%;
     text-align: center;
   }
 
   .telefon-nummer-kontakt {
-    padding: 5%;
+    margin-top: 10%;    
     text-align: center;
   }
+
   .telefon-nummer-kontakt h2 {
     margin-bottom: 3%;
     margin-top: 3%;
@@ -859,7 +859,7 @@ body{
   /* Styling af ring tekst + dingsedame med telefon. Da dette er en lidt anden styling end en colum bruges inline grid */
     .ringx4container {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 35% 65%;
       padding: 5%;
       margin: auto;
       box-sizing: border-box;
@@ -884,11 +884,13 @@ body{
       transform: translateY(0); /* Endelig position */
      }  
 
-    .dingsetelefon {
-      width: auto;
-      height: 35vh;
+    .dingsetelefon-div img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin: 0 auto;
     }
-
+    
     .openhours-section p {
       margin-bottom: 1%;
       text-align: center;
@@ -900,11 +902,17 @@ body{
 
     .openhours-section {
       padding: 2%;
-      margin-top: 5%;
+      margin-top: 10%;
     }
 
     .ekstra-tekst {
       margin-top: 5%;
+    }
+
+    #openhours{
+      display: flex;
+      justify-content: center;
+      text-align: center;
     }
 
 
@@ -1691,7 +1699,7 @@ iframe{
 }
 
 /*Hover effect på navbar i footer*/
-.mininav a:hover, .kortcom a:hover, .info-container1 a:hover, .iconergalleri a:hover{
+.mininav a:hover, .kortcom a:hover, .info-container1 a:hover, .iconergalleri a:hover, .midtersection a:hover{
   color:var(--red);
 }
 
@@ -2022,11 +2030,6 @@ iframe{
       padding-bottom: 2px; 
     }
 
-  /* billeder på midtersection af forside*/
-    .udefraillustration {
-      width: 50%;
-      height: 50%;
-    }
 
   /* instagram sektion forside */
     .instagram {
@@ -2069,16 +2072,9 @@ iframe{
   .udefraillustration {
     width: 50%;
     height: 50%;
-    margin-top: 5%;
-    margin-bottom: 5%;
   }
 
   /* instagram sektion */
-
-  .instagram {
-    margin-top: 10%;
-  }
-
   .foelgtekst {
     display: flex;
     justify-content: center;
@@ -2089,10 +2085,6 @@ iframe{
     margin-right: 10%;
     margin-top: 0;
     margin-bottom: 0;
-    }
-
-    .foelgknap {
-      margin-bottom: 5%;
     }
 
     .foelgknap .fold_btn{
@@ -2108,6 +2100,7 @@ iframe{
   /******** kontakt os *******/
     #openhours{
       font-size: 3rem;
+      text-align: center;
     }
 
     .kursivtekst{
@@ -2145,28 +2138,31 @@ iframe{
       left: 0;
     }
 
-    #openhours {
-      font-size: 3rem;
-    }
-
     .ringx4container {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      padding: 0%;
-      margin: 0 0;
       width: 100%;
+      justify-content: center;
+      grid-template-columns: 1fr 1fr;
+
   }
 
-  .dingsetelefon {
-    width: auto;
-    height: 60vh;
+  .dingsetelefon-div img {
+    display: flex;
+    max-width: 100%;
+    /*ÆNDRE STØRELSE HER PÅ DINGSE FIGUR HVIS DEN SKAL VÆRE STØRRE PÅ COMPUTER*/
+    padding: 10%;
+    align-content: flex-end;
   }
 
   .ringx4 h3 {
     text-align: center;
     padding: 0%;
     margin-left: 30%;
-    font-size: 5em;
+    /*ÆNDRE STØRRELSE HER PÅ RINGx4*/
+    font-size: 6em;
+  }
+  .ringx4 {
+    padding: 10%;
   }
 
     .adresse-kontakt {
@@ -2179,10 +2175,6 @@ iframe{
     .kort-kontakt {
       padding: 3% 5%;
       width: 70%;
-    }
-
-    .openhours-section {
-      margin-top: 1%;
     }
 
     .telefon-nummer-kontakt {
