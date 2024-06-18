@@ -643,9 +643,45 @@ body{
     background-color: var(--background);
     border-radius: 1em;
     border: 1.5px solid var(--red);
+    width: 18%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 1%;
+    padding-right: 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin: 0 auto;
+    margin-top: 2%;
+    margin-bottom: 8%;
+  }
+
+  .callknap1{
+    background-color: var(--background);
+    border-radius: 1em;
+    border: 1.5px solid var(--red);
     width: 10%;
     padding-top: 1%;
     padding-bottom: 1%;
+    padding-left: 1%;
+    padding-right: 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin: 0 auto;
+    margin-top: 2%;
+    margin-bottom: 8%;
+  }
+
+  .callknap2{
+    background-color: var(--background);
+    border-radius: 1em;
+    border: 1.5px solid var(--red);
+    width: 8%;
+    padding-top: 0.7%;
+    padding-bottom: 0.7%;
     padding-left: 1%;
     padding-right: 1%;
     display: flex;
@@ -668,7 +704,9 @@ body{
     transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
   }
 
-   .callknap:hover {
+
+
+   .callknap:hover, .callknap1:hover, .callknap2:hover {
       background-color: var(--contrastbackground); 
       box-shadow: 0 4px 15px #c7352a(0, 0, 0, 0.2); 
       transform: scale(1.05);
@@ -1346,28 +1384,22 @@ body{
       }
 
       #h3_foldud {
-      font-size: 2rem;
-      color: var(--red);
+      font-size: 1.5rem;
+      color: var(--dark);
       margin-left: 22%;
       margin-bottom: 1%;
       }
 
       #h3_foldud_siden {
-        font-size: 2rem;
-        color: var(--red);
+        font-size: 1.5rem;
+        color: var(--dark);
         margin-left: 58%;
         margin-top: -5%;
         }
 
       #p_foldud {
         text-align: center;
-        margin: 2% 10%;
-      }
-
-      .tekst_foldud_bagom h2 {
-        text-align: center;
-        text-transform: uppercase;
-        padding-bottom: 5%;
+        margin: 2% 3%;
       }
 
       .p_foldud_info {
@@ -1578,7 +1610,8 @@ body{
         justify-content: center;
         align-items: center;
         gap: 10%;
-        margin-top: 5%;
+        margin-top: 10%;
+        margin-bottom: 10%;
       }
 
       .olivenolie_og_smoer {
@@ -2343,19 +2376,8 @@ iframe{
     gap: 20px; 
   }
 
-  .text h4 {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-
-  }
-
   .text {
-    padding: 1%;
-    line-height: 2rem;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
+    text-align: justify;
   }
 
   .desktop_broed {
