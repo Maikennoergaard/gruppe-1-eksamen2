@@ -722,7 +722,7 @@ body{
   /* instagram sektion */
 
     .instagram {
-      margin-top: 25%;
+      margin-top: 20%;
       gap: 5%;
     }
 
@@ -796,7 +796,8 @@ body{
     display: flex;
     text-align: center;
     justify-content: center;
-    margin-top: 7%;
+    margin: 0 5%;
+    margin-bottom: 2%;
   }
 
   .openhoursul{
@@ -2203,7 +2204,7 @@ iframe{
     padding: 0%;
     margin-left: 30%;
     /*ÆNDRE STØRRELSE HER PÅ RINGx4*/
-    font-size: 6em;
+    font-size: 5em;
   }
   .ringx4 {
     padding: 10%;
