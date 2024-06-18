@@ -1234,6 +1234,22 @@ body{
       text-align: center;
       padding-top: 4%;
     }
+    
+    .tekst_foldud_bagom h2 {
+      text-align: center;
+      text-transform: uppercase;
+      padding-bottom: 5%;
+      margin: 2% 3%;
+    }
+
+    .text {
+      padding: 1%;
+      line-height: 2rem;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      text-align: justify;
+    }
 
     @media (min-width: 800px) {
       .read-more-content {
@@ -1391,15 +1407,15 @@ body{
       }
 
       #h3_foldud {
-      font-size: 1.5rem;
-      color: var(--dark);
+      font-size: 2rem;
+      color: var(--red);
       margin-left: 22%;
       margin-bottom: 1%;
       }
 
       #h3_foldud_siden {
-        font-size: 1.5rem;
-        color: var(--dark);
+        font-size: 2rem;
+        color: var(--red);
         margin-left: 58%;
         margin-top: -5%;
         }
