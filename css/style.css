@@ -758,7 +758,7 @@ body{
     }
 
     .instagram-media {
-      height: 33vh;
+      height: 38vh;
       width: 33vh;
       margin: 2% 30%;
       padding: 5% 5%;
@@ -1101,11 +1101,13 @@ body{
     }
 
     #laesMereKnap, #lukKnap {
-      border: 2px solid #c7352a; 
+      border: 2px solid var(--contrastbackground); 
       padding-bottom: 2px;
       display: flex;
       justify-content: center;
+      align-items: center;
       margin: 0 40% 70px 40%;
+      font-size: 1em;
     }
 
     #lukKnap {
