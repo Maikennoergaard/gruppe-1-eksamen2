@@ -1346,22 +1346,28 @@ body{
       }
 
       #h3_foldud {
-      font-size: 1.5rem;
-      color: var(--dark);
+      font-size: 2rem;
+      color: var(--red);
       margin-left: 22%;
       margin-bottom: 1%;
       }
 
       #h3_foldud_siden {
-        font-size: 1.5rem;
-        color: var(--dark);
+        font-size: 2rem;
+        color: var(--red);
         margin-left: 58%;
         margin-top: -5%;
         }
 
       #p_foldud {
         text-align: center;
-        margin: 2% 3%;
+        margin: 2% 10%;
+      }
+
+      .tekst_foldud_bagom h2 {
+        text-align: center;
+        text-transform: uppercase;
+        padding-bottom: 5%;
       }
 
       .p_foldud_info {
@@ -1572,8 +1578,7 @@ body{
         justify-content: center;
         align-items: center;
         gap: 10%;
-        margin-top: 10%;
-        margin-bottom: 10%;
+        margin-top: 5%;
       }
 
       .olivenolie_og_smoer {
@@ -2338,8 +2343,19 @@ iframe{
     gap: 20px; 
   }
 
+  .text h4 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+  }
+
   .text {
-    text-align: justify;
+    padding: 1%;
+    line-height: 2rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
   }
 
   .desktop_broed {
