@@ -1154,7 +1154,13 @@ body{
       align-items: center;
       margin: 0 40% 70px 40%;
       font-size: 1em;
+      border-radius: 5px;
+      cursor: pointer;
+      font-family: "Alef", sans-serif;
+      color: var(--dark);
     }
+
+  
 
     #lukKnap {
       display: none;  /* Initially hide the "Luk" button */
@@ -2387,6 +2393,7 @@ iframe{
   .fold_reply {
    margin-left: 2%;
    margin-top: 2%;
+   margin-bottom: 5%;
   }
 
   .reply {
