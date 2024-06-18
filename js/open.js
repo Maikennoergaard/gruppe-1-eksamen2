@@ -1,6 +1,7 @@
 'use strict';
+
 function initMap() {
-    // Dingses place ID
+    // Dingses sted-ID
     let placeId = 'ChIJqzgsLqM_TEYR4wcxdBG0Iyw';
 
     // Opret et kort for at initialisere PlacesService
@@ -15,38 +16,43 @@ function initMap() {
         fields: ['opening_hours']
     }, function (place, status) {
         if (status === google.maps.places.PlacesServiceStatus.OK) {
+            // Hvis anmodningen lykkes, opdater åbningstiderne
             updateOpeningTimes(place.opening_hours);
         } else {
-            console.error('Place details request failed with status: ' + status);
+            // Hvis anmodningen fejler, log en fejlmeddelelse
+            console.error('Anmodning om stedsdetaljer mislykkedes med status: ' + status);
         }
     });
 }
 
 function updateOpeningTimes(openingHours) {
+    // Tjek om åbningstider er tilgængelige
     if (!openingHours || !openingHours.weekday_text) {
-        console.error('No opening hours available for this place.');
+        console.error('Ingen åbningstider tilgængelige for dette sted.');
         return;
     }
 
-    // Get today's day index (0 is Sunday, 1 is Monday, etc.)
+    // Få dagens dagsindeks (0 er søndag, 1 er mandag, osv.)
     let today = new Date().getDay();
     let googleApiDayIndex = (today === 0) ? 6 : today - 1;
 
-    // Update today's opening hours
+    // Opdater dagens åbningstider
     let todayOpeningTime = openingHours.weekday_text[googleApiDayIndex];
     let openingTimesElement = document.getElementById('today-opening-time');
     if (openingTimesElement) {
+        // Tjek om stedet er lukket i dag
         if (todayOpeningTime.toLowerCase().includes('lukket') || todayOpeningTime.toLowerCase().includes('closed')) {
             openingTimesElement.textContent = 'Vi har lukket i dag.';
         } else {
-            let openingTime = todayOpeningTime.split(': ')[1]; // Assuming format is "Monday: 9:00 AM – 5:00 PM"
+            // Ekstraher åbningstiden fra teksten
+            let openingTime = todayOpeningTime.split(': ')[1]; // Antager formatet er "Monday: 9:00 AM – 5:00 PM"
             openingTimesElement.textContent = `Vi har åben i dag fra ${openingTime}.`;
         }
     } else {
-        console.error('today-opening-time element not found.');
+        console.error('Elementet today-opening-time blev ikke fundet.');
     }
 
-    // Update the full week's opening hours if the element exists
+    // Opdater hele ugens åbningstider hvis elementet findes
     let timesList = document.getElementById('times-list');
     if (timesList) {
         timesList.innerHTML = '';
@@ -58,8 +64,8 @@ function updateOpeningTimes(openingHours) {
     }
 }
 
-// Initialize the map when the DOM is fully loaded
+// Initialiser kortet når DOM'en er fuldt indlæst
 document.addEventListener('DOMContentLoaded', initMap);
-// Initialize the map and fetch the opening times once the window loads
+// Initialiser kortet og hent åbningstiderne når vinduet er indlæst
 window.onload = initMap;
 
