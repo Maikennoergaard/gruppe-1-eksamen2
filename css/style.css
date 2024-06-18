@@ -1002,7 +1002,7 @@ body{
     .read-more img{
       width: 100%;
     }
-
+    
   /* Styler søren og olivia teksten til mobil */
     .bagom-ordx4 {
       padding: 5% 3%;
@@ -1041,7 +1041,8 @@ body{
 
   /* tekst til bagom */
     .tekst_container_bagom {
-      margin-top: 5%;
+      margin-top: 1%;
+      margin-bottom: 2%;
     }
 
     .broedtekst-desktop {
@@ -1141,7 +1142,22 @@ body{
       padding-top: 4%;
     }
 
-
+    @media (min-width: 800px) {
+      .read-more-content {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+      }
+    
+      .text {
+        flex: 0 0 60%; /* This item will take up 60% of the container's width */
+      }
+    
+      .img {
+        flex: 0 0 40%; /* This item will take up 40% of the container's width */
+      }
+    }
+    
 
     .mobil_broed {
       display: none;
@@ -1177,6 +1193,7 @@ body{
       width: 8em;
       margin-right: 53%;
       border-radius: 5px;
+      margin-top: -15%;
     }
 
     .fold_btn_dingse {
@@ -1190,6 +1207,7 @@ body{
       width: 8em;
       margin-left: 50%;
       border-radius: 5px;
+      margin-top: -15%;
     }
 
     /* Ekstra dingse foto til mobil vs desktop styling */
@@ -2202,7 +2220,7 @@ iframe{
 
     #mere {
       padding-left: 1%;
-      padding-bottom: 3%;
+      margin-top: 2%;
     }
     
     .bagom-ordx4 {
@@ -2213,7 +2231,7 @@ iframe{
 
     .bagom1 h1 {
       text-align: center;
-      padding-top: 2%; 
+      padding-top: 3%; 
       padding-bottom: 1%;
     }
     .bagom1 p {
