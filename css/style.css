@@ -1262,9 +1262,7 @@ body{
         flex: 0 0 60%; /* This item will take up 60% of the container's width */
       }
     
-      .img {
-        flex: 0 0 40%; /* This item will take up 40% of the container's width */
-      }
+      
     }
     
 
