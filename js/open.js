@@ -46,7 +46,7 @@ function updateOpeningTimes(openingHours) {
         } else {
             // Ekstraher åbningstiden fra teksten
             let openingTime = todayOpeningTime.split(': ')[1]; // Antager formatet er "Monday: 9:00 AM – 5:00 PM"
-            openingTimesElement.textContent = `VI HAR ÅBENT IDAG FRA ${openingTime}.`;
+            openingTimesElement.textContent = `VI HAR ÅBENT I DAG FRA ${openingTime}.`;
         }
     } else {
         console.error('Elementet today-opening-time blev ikke fundet.');
