@@ -671,8 +671,9 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center; 
-    margin: 8% 10%;
     text-align: center;
+    margin-left: 20%;
+    margin-right: 20%;
     margin-top: 8%;
   }
 
@@ -688,13 +689,11 @@ body{
     #responsivetekst1 {
       display: flex;
       justify-content: center;
-      font-weight: 200;
     }
 
     #responsivetekst2 {
       display: flex;
       justify-content: center;
-      font-weight: 200;
     }
     
   /* tekst til midtersection */
@@ -723,7 +722,7 @@ body{
   /* instagram sektion */
 
     .instagram {
-      margin-top: 20%;
+      margin-top: 25%;
       gap: 5%;
     }
 
@@ -797,6 +796,7 @@ body{
     display: flex;
     text-align: center;
     justify-content: center;
+    margin-top: 7%;
   }
 
   .openhoursul{
@@ -1176,7 +1176,7 @@ body{
       cursor: pointer;
       width: 8em;
       margin-right: 53%;
-      border-radius: 5px;
+      border-radius: 10px;
     }
 
     .fold_btn_dingse {
@@ -1215,7 +1215,7 @@ body{
         text-align: center;
         cursor: pointer;
         width: 8em;
-        border-radius: 5px;
+        border-radius: 10px;
       }
 
       .fold_btn_dingse {
@@ -1227,7 +1227,7 @@ body{
         text-align: center;
         cursor: pointer;
         width: 8em;
-        border-radius: 5px;
+        border-radius: 10px;
       }
 
       /* Fjerner dingsevand billede på mobil og indsætter det under teksten */
@@ -1983,8 +1983,6 @@ iframe{
       justify-content: center;
       align-items: center;
       text-align: center;
-      font-weight: 300;
-      font-size: 1.7em;
     }
 
     .responsivetekst {
@@ -2089,11 +2087,11 @@ iframe{
 
     .foelgknap .fold_btn{
       margin-right: 0;
-      font-size: 1.5em;
+      font-size: 1.2em;
     }
 
     .fold_btn, .fold_btn_dingse{
-      font-size: 1.5em;
+      font-size: 1.2em;
     }
     
 
