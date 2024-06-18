@@ -42,11 +42,11 @@ function updateOpeningTimes(openingHours) {
     if (openingTimesElement) {
         // Tjek om stedet er lukket i dag
         if (todayOpeningTime.toLowerCase().includes('lukket') || todayOpeningTime.toLowerCase().includes('closed')) {
-            openingTimesElement.textContent = 'Vi har lukket i dag.';
+            openingTimesElement.textContent = 'VI HAR LUKKET I DAG.';
         } else {
             // Ekstraher åbningstiden fra teksten
             let openingTime = todayOpeningTime.split(': ')[1]; // Antager formatet er "Monday: 9:00 AM – 5:00 PM"
-            openingTimesElement.textContent = `Vi har åben i dag fra ${openingTime}.`;
+            openingTimesElement.textContent = `VI HAR ÅBENT IDAG FRA ${openingTime}.`;
         }
     } else {
         console.error('Elementet today-opening-time blev ikke fundet.');

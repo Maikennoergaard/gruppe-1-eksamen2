@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Titillium Web", sans-serif;
+    font-family: "Alef", sans-serif;
     scroll-behavior: smooth;
     list-style: none;
     text-decoration: none;
@@ -793,10 +793,11 @@ body{
 /* Styling af font med ID for at størrelserne passer */
 
   .openhours h2{
-    font-size: 2.5em;
+    font-size: 1.5em;
     display: flex;
     text-align: center;
     justify-content: center;
+    margin: 0 5%;
   }
 
   .openhoursul{
@@ -804,12 +805,12 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 0 15%;
+    margin: 0 3%;
   }
 
   #times-list{
     font-family: "Alef", sans-serif;
-    font-size: 1.3em;
+    font-size: 0.8em;
   }
 
   #vibor, #adressekontakt{
@@ -833,6 +834,7 @@ body{
 
   .kort-kontakt {
     width: 100%;
+    padding: 7%;
     height: auto;
   }
 
@@ -847,20 +849,20 @@ body{
   }
 
   .telefon-nummer-kontakt {
-    margin-top: 10%;    
+    margin-top: 1%; 
+    margin: 0 3%;   
     text-align: center;
   }
 
   .telefon-nummer-kontakt h2 {
-    margin-bottom: 3%;
-    margin-top: 3%;
+    margin-top: 14%;
   }
 
   /* Styling af ring tekst + dingsedame med telefon. Da dette er en lidt anden styling end en colum bruges inline grid */
     .ringx4container {
       display: grid;
       grid-template-columns: 35% 65%;
-      padding: 5%;
+      padding: 17% 10%;
       margin: auto;
       box-sizing: border-box;
       width: fit-content;
@@ -2098,10 +2100,32 @@ iframe{
     
 
   /******** kontakt os *******/
-    #openhours{
-      font-size: 3rem;
-      text-align: center;
-    }
+    .openhours h2 {
+    font-size: 2.5em;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 2%;
+  }
+
+  .openhours-section {
+    padding: 2%;
+    margin-top: 10%;
+}
+
+.openhoursul{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 17%;
+  margin-top: 7%;
+}
+
+#times-list{
+  font-family: "Alef", sans-serif;
+  font-size: 1.2em;
+}
 
     .kursivtekst{
       margin-left: 23%;
@@ -2121,8 +2145,7 @@ iframe{
     }
 
     .telefon-nummer-kontakt {
-      margin-left: 15%;
-      margin-right: 15%;
+      margin: 0 17%;
     }
 
     .coverbillede {
@@ -2143,6 +2166,7 @@ iframe{
       width: 100%;
       justify-content: center;
       grid-template-columns: 1fr 1fr;
+      padding: 5% 10%;
 
   }
 
@@ -2174,7 +2198,6 @@ iframe{
 
     .kort-kontakt {
       padding: 3% 5%;
-      width: 70%;
     }
 
     .telefon-nummer-kontakt {
