@@ -2629,6 +2629,27 @@ iframe{
     }
   }
 
+  /* forside knapper */
+  @media(max-width: 800px) {
+    .callknap1 {
+      width: 40%;
+      margin-top: 10%;
+      margin-bottom: 30%;
+    }
+
+    .callknap2 {
+      width: 30%;
+      margin-top: 6%;
+      margin-bottom: 15%;
+    }
+
+    .callknap {
+      width: 30%;
+      margin-top: 6%;
+      margin-bottom: 15%;
+    }
+  }
+
   /******STYLER MEDIA OVER 1500PX******/ 
 
   @media (min-width: 1500px) {
