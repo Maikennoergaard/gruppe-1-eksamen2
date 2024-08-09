@@ -881,7 +881,10 @@ body{
     text-align: center;
     justify-content: center;
     margin-bottom: 2%;
+    text-decoration: none;
+    color: var(--red);
   }
+  
 
   .openhoursul{
     display: flex;
@@ -998,6 +1001,7 @@ body{
       display: flex;
       justify-content: center;
       text-align: center;
+      font-size: 1.5em;
     }
 
 
@@ -1196,8 +1200,6 @@ body{
       font-family: "Alef", sans-serif;
       color: var(--dark);
     }
-
-  
 
     #lukKnap {
       display: none;  /* Initially hide the "Luk" button */
@@ -2225,6 +2227,7 @@ iframe{
     padding: 2%;
     margin-top: 10%;
 }
+
 
 .openhoursul{
   display: flex;
