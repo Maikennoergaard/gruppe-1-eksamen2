@@ -1993,10 +1993,10 @@ iframe{
       overflow-x: auto; 
     }
    
-
     .menuitemname{
       font-size: 1em;
     }
+
     /*footer*/
     .hideOnLaptop{
       display: none;
@@ -2004,7 +2004,7 @@ iframe{
 
     footer{
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: 0.75fr 1.5fr 0.75fr;
     }
 
     #abenfooter{
@@ -2019,25 +2019,15 @@ iframe{
     .mininav{
       grid-column: 2;
       grid-row: 4;
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
+      display: flex;
+      justify-content: center;
+      gap: 10%;
     }
+
     .mininav a{
-      font-size: 1.1em;
+      font-size: 0.9em;
     }
 
-    .menukortmininav{
-      grid-column: 1;
-    }
-    .kontaktosmininav{
-      grid-column: 2;
-    }
-    .bagommininav{
-      grid-column: 3;
-    }
-
-
-    
 
   /******** forside *******/
   /* dingsefigur og multiwords på forside*/
